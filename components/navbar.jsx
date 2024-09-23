@@ -1,10 +1,11 @@
 import Link from "next/link"
 import { Drawer, DrawerTrigger, DrawerContent, DrawerHeader, DrawerTitle } from "@/components/ui/drawer"
 import { Button } from "@/components/ui/button"
+import { ModeToggle } from "./dark-switcher";
 
 export function Navbar() {
   return (
-    (<header className="w-full shadow">
+    (<header className="w-full shadow bg-background/50 sticky top-0 backdrop-blur">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2" prefetch={false}>
           <MountainIcon className="h-6 w-6" />
@@ -47,6 +48,7 @@ export function Navbar() {
             prefetch={false}>
             Sign Up
           </Link>
+          <ModeToggle />
         </div>
         <Drawer>
           <DrawerTrigger asChild>
@@ -96,6 +98,7 @@ export function Navbar() {
                 prefetch={false}>
                 Sign Up
               </Link>
+              <ModeToggle />
             </div>
           </DrawerContent>
         </Drawer>
