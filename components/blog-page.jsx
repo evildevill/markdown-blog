@@ -40,7 +40,7 @@ export const BlogPage = () => {
             <div className="p-6">
               <div className="flex items-center mb-4">
                 <div className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                  {new Date(post.date).toLocaleDateString()} {/* Format the date */}
+                  {new Date(post.date).toLocaleDateString()}
                 </div>
 
                 <span className="mx-2 text-gray-400">·</span>
