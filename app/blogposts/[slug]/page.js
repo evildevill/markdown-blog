@@ -2,7 +2,7 @@ import fs from "fs";
 import matter from "gray-matter";
 
 export default function Page({ params }) {
-    const filepath = `content/${params.slug}.md`;
+    const filepath = `public/content/${params.slug}.md`;
 
     let fileContent;
     try {
