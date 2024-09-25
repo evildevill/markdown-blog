@@ -1,8 +1,19 @@
 import fs from "fs";
+import path from "path";
 import matter from "gray-matter";
 
-export default function Page({ params }) {
-    const filepath = `public/content/${params.slug}.md`;
+// This function generates the static paths for each blog post
+export async function generateStaticParams() {
+    const files = fs.readdirSync("public/content");
+    return files.map((fileName) => ({
+        slug: fileName.replace(".md", ""),
+    }));
+}
+
+// This is a React Server Component that will render your blog post
+export default async function Page({ params }) {
+    const { slug } = params;
+    const filepath = path.join("public/content", `${slug}.md`);
 
     let fileContent;
     try {
