@@ -1,10 +1,10 @@
 ---
-title: Exploring the Potential of Serverless Computing
-description: Stay ahead of the curve and learn about the latest trends and innovations shaping the futurof web development.
-slug: exploring-the-potential-of-serverless-computing
-date: 2023-03-01
-author: Michael Johnson
-image: /placeholder.svg
+title: "Exploring the Potential of Serverless Computing"
+description: "Stay ahead of the curve and learn about the latest trends and innovations shaping the futurof web development."
+slug: "exploring-the-potential-of-serverless-computing"
+date: "2023-03-01"
+author: "Michael Johnson"
+image: "/placeholder.svg"
 ---
 
 # Exploring the Potential of Serverless Computing
