@@ -72,7 +72,7 @@ export const BlogPage = () => {
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {blogPosts.map((post) => (
           <div key={post.id} className="bg-white dark:bg-black rounded-lg shadow-md overflow-hidden">
-            <Link href={`/blog/${post.slug}`} prefetch={false}>
+            <Link href={`/blogposts/${post.slug}`} prefetch={false}>
               <Image
                 src={post.image}
                 alt={post.title}
@@ -88,12 +88,12 @@ export const BlogPage = () => {
                 <span className="mx-2 text-gray-400">·</span>
                 <div className="text-sm font-medium text-gray-500 dark:text-gray-400">{post.author}</div>
               </div>
-              <Link href={`/blog/${post.slug}`} prefetch={false}>
+              <Link href={`/blogposts/${post.slug}`} prefetch={false}>
                 <h2 className="text-xl font-bold mb-2 hover:text-primary dark:hover:text-primary-light transition-colors dark:text-white">{post.title}</h2>
               </Link>
               <p className="text-gray-500 dark:text-gray-300 mb-4">{post.description}</p>
               <Link
-                href={`/blog/${post.slug}`}
+                href={`/blogposts/${post.slug}`}
                 className="inline-block bg-primary text-white dark:text-black px-4 py-2 rounded-md hover:bg-primary-dark transition-colors"
                 prefetch={false}
               >
