@@ -7,7 +7,7 @@ export function TopBlog() {
     (<section className="px-4 py-8 sm:px-6 md:py-12 lg:px-8">
       <div className="container mx-auto">
         <div
-          className="flex flex-col items-center md:flex-row md:justify-between md:items-end mb-6 md:mb-8">
+          className="flex flex-col items-center md:flex-row md:justify-center md:items-end mb-6 md:mb-8">
           <div className="space-y-2 text-center">
             <h2 className="text-2xl font-bold sm:text-3xl">Top Stories</h2>
             <p className="text-muted-foreground mb-4 md:mb-0">Read our weekly top blog posts</p>
