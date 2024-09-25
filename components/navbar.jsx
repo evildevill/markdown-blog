@@ -5,7 +5,7 @@ import { ModeToggle } from "./dark-switcher";
 
 export function Navbar() {
   return (
-    (<header className="w-full shadow bg-background/50 sticky top-0 backdrop-blur">
+    (<header className="w-full shadow bg-background/50 sticky top-0 backdrop-blur z-10">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2" prefetch={false}>
           <MountainIcon className="h-6 w-6" />
