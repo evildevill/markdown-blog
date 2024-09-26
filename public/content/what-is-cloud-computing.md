@@ -17,7 +17,7 @@ def hello_world(event, context):
     }
 ```
 
-## What is Serverless Computing?
+## [What is Serverless Computing?](#exploring-the-potential-of-serverless-computing)
 
 Serverless computing is a cloud computing model that abstracts the infrastructure management from the developer. With serverless computing, developers can focus on writing code and building applications without having to worry about provisioning, scaling, and managing servers.
 
@@ -47,6 +47,6 @@ Serverless computing is well-suited for a wide range of use cases, including:
 
 4. **IoT Applications**: Serverless computing is well-suited for building IoT applications that require real-time processing of sensor data.
 
-## Conclusion
+## [Conclusion](#conclusion)
 
 Serverless computing is a powerful cloud computing model that can help you build better, more scalable applications. By abstracting away the complexity of managing servers, serverless computing allows you to focus on writing code and building applications. Whether you're building web applications, APIs, or IoT applications, serverless computing can help you stay ahead of the curve and deliver innovative solutions to your users.
