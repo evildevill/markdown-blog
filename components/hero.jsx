@@ -78,8 +78,12 @@ export function Hero() {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <Button>Read Blog Posts</Button>
-            <Button variant="secondary">About Me</Button>
+            <Link href="/blog" passHref>
+              <Button>Read Blog Posts</Button>
+            </Link>
+            <Link href="/about" passHref>
+              <Button variant="secondary">About Me</Button>
+            </Link>
           </div>
         </div>
         <Image
