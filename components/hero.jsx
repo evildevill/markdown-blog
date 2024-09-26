@@ -8,13 +8,16 @@ export function Hero() {
       <div
         className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
         <div className="space-y-4">
+          <p className="text-gray-700 dark:text-gray-300 mt-2 ml-0 text-sm">
+            Hi, I am Waseem Akram
+          </p>
           <h1
             className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
             Empowering Minds, Inspiring Change
           </h1>
           <p
             className="max-w-[600px] text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed">
-            As a passionate educator and lifelong learner, I&aposm dedicated to sharing my knowledge and expertise in web
+            As a passionate educator and lifelong learner, I dedicated to sharing my knowledge and expertise in web
             development, design, and personal growth. Join me on a journey of continuous learning and self-improvement.
           </p>
           <div className="flex items-center gap-4">
