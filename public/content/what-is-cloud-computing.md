@@ -9,7 +9,7 @@ image: "/placeholder.svg"
 
 Serverless computing is a cloud computing model that allows developers to build and run applications without having to manage the underlying infrastructure. In this article, we'll explore the potential of serverless computing and discuss how it can help you build better, more scalable applications.
 
-```python 
+```python showLineNumbers
 def hello_world(event, context):
     return {
         'statusCode': 200,

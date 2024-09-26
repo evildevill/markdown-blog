@@ -1,11 +1,39 @@
+"use client";
 import Link from "next/link"
 import { Drawer, DrawerTrigger, DrawerContent, DrawerHeader, DrawerTitle } from "@/components/ui/drawer"
 import { Button } from "@/components/ui/button"
 import { ModeToggle } from "./dark-switcher";
+import LoadingBar from 'react-top-loading-bar'
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export function Navbar() {
+
+  const [progress, setProgress] = useState(0)
+  const pathname = usePathname()
+
+  useEffect(() => {
+    setProgress(30)
+
+    setTimeout(() => {
+      setProgress(70)
+    }, 100);
+
+    setTimeout(() => {
+      setProgress(100)
+    }, 800);
+  }, [pathname])
+
+  useEffect(() => {
+    setTimeout(() => {
+      setProgress(0)
+    }, 900);
+  }, [])
+
+
   return (
     (<header className="w-full shadow bg-background/50 sticky top-0 backdrop-blur z-10">
+      <LoadingBar color="#F35051" progress={progress} onLoaderFinished={() => setProgress(0)} />
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2" prefetch={false}>
           <MountainIcon className="h-6 w-6" />
