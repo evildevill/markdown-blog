@@ -1,6 +1,6 @@
 ---
 title: "Exploring the Potential of Serverless Computing"
-description: "Stay ahead of the curve and learn about the latest trends and innovations shaping the futurof web development."
+description: "Serverless computing is a cloud computing model that allows developers to build and run applications without having to manage the..."
 slug: "exploring-the-potential-of-serverless-computing-1"
 date: "2023-03-01"
 author: "Michael Johnson"
