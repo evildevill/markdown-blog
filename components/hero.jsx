@@ -17,7 +17,7 @@ export function Hero() {
           </h1>
           <p
             className="max-w-[600px] text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed">
-            As a passionate educator and lifelong learner, I dedicated to sharing my knowledge and expertise in web
+            As a passionate educator and lifelong learner, I dedicated to sharing my knowledge and expertise in cybersecurity, web
             development, design, and personal growth. Join me on a journey of continuous learning and self-improvement.
           </p>
           <div className="flex items-center gap-4">
