@@ -91,35 +91,35 @@ export function AboutPage() {
           </div>
           <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:justify-start">
             <Image
-              src="/placeholder.svg"
+              src="/images/oscp-badge.png"
               width="80"
               height="80"
               alt="OSCP Badge"
               className="h-20 w-20 sm:h-24 sm:w-24"
               style={{ aspectRatio: "80/80", objectFit: "cover" }} />
             <Image
-              src="/placeholder.svg"
+              src="/images/ceh-badge.png"
               width="80"
               height="80"
               alt="CEH Badge"
               className="h-20 w-20 sm:h-24 sm:w-24"
               style={{ aspectRatio: "80/80", objectFit: "cover" }} />
             <Image
-              src="/placeholder.svg"
+              src="/images/sc-900-logo.png"
               width="80"
               height="80"
               alt="YouTube Badge"
               className="h-20 w-20 sm:h-24 sm:w-24"
               style={{ aspectRatio: "80/80", objectFit: "cover" }} />
             <Image
-              src="/placeholder.svg"
+              src="/images/cybersecurity-cisco-badge.png"
               width="80"
               height="80"
               alt="Security Badge"
               className="h-20 w-20 sm:h-24 sm:w-24"
               style={{ aspectRatio: "80/80", objectFit: "cover" }} />
             <Image
-              src="/placeholder.svg"
+              src="/images/sc-900-logo.png"
               width="80"
               height="80"
               alt="Python Badge"
