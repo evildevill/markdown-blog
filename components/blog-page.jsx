@@ -9,7 +9,7 @@ const blog = dirContent.map(file => {
   const fileContent = fs.readFileSync(`public/content/${file}`, "utf-8");
   const { data } = matter(fileContent);
   return data;
-})
+}).sort((a, b) => new Date(b.date) - new Date(a.date)); // Sort by date (newest first)
 
 
 
