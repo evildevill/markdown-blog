@@ -7,10 +7,11 @@ import rehypeStringify from "rehype-stringify";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import rehypePrettyCode from "rehype-pretty-code";
-import rehypeSlug from 'rehype-slug';
+import rehypeSlug from "rehype-slug";
 import { unified } from "unified";
-import { transformerCopyButton } from '@rehype-pretty/transformers';
+import { transformerCopyButton } from "@rehype-pretty/transformers";
 import OnThisPage from "@/components/OnThisPage";
+import { OtherPosts } from "@/components/OtherPosts"; // Import the OtherPosts component
 
 // This function generates the static paths for each blog post
 export async function generateStaticParams() {
@@ -90,6 +91,10 @@ export default async function Page({ params }) {
         <aside className="hidden lg:block w-64 sticky top-16">
           <OnThisPage htmlContent={htmlContent} />
         </aside>
+      </div>
+
+      <div>
+        <OtherPosts currentSlug={slug} />
       </div>
     </div>
   );
