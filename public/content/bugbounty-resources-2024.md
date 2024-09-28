@@ -4,8 +4,10 @@ description: "Bugbounty Resources to get started with bug bounty hunting and sec
 slug: "bugbounty-resources-2024"
 date: "2024-03-01"
 author: "Waseem Akram"
-image: "/placeholder.svg"
+image: "/images/posts/bugbounty/bugbounty.png"
 ---
+
+![BugBounty](/images/posts/bugbounty/bugbounty.png)
 
 Bug bounty programs are a great way to earn money by finding and reporting security vulnerabilities in web applications and software. If you're interested in bug bounty hunting and security research, there are a number of resources and tools that can help you get started. In this article, we'll explore some of the best bug bounty resources and tools that you can use to enhance your skills and find more bugs.
 
