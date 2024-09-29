@@ -76,15 +76,19 @@ export default async function Page({ params }) {
           </p>
 
           {/* Blog content */}
+          
+          {/* OnThisPage below content for mobile */}
+          
+          <div className="block lg:hidden mt-8">
+            <OnThisPage htmlContent={htmlContent} />
+          </div>
+
           <div
             className="prose dark:prose-invert mt-6"
             dangerouslySetInnerHTML={{ __html: htmlContent }}
           />
 
-          {/* OnThisPage below content for mobile */}
-          <div className="block lg:hidden mt-8">
-            <OnThisPage htmlContent={htmlContent} />
-          </div>
+
         </div>
 
         {/* Sidebar for larger screens */}
