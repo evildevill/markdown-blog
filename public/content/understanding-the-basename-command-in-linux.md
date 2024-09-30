@@ -7,8 +7,6 @@ author: "Waseem Akram"
 image: "/images/posts/basename/basename.png"
 ---
 
-![Basename](/images/posts/basename/basename.png)
-
 The `basename` command in Linux is used to extract the last element of a file path. This is particularly helpful in bash scripts where you only need the filename or directory name from a full path. The `basename` command can be used in various ways to manipulate file paths and extract specific parts of the path. Additionally, it allows you to remove file extensions or suffixes.
 
 In this guide, we'll explore how to use the `basename` command with examples, showcasing its options and capabilities.
