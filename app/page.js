@@ -1,4 +1,5 @@
 import { Hero } from "@/components/hero";
+import { NewsLetter } from "@/components/news-letter";
 import { Pricing } from "@/components/pricing";
 import { TopBlog } from "@/components/top-blog";
 
@@ -11,6 +12,10 @@ export default function Home() {
 
       <section>
         <TopBlog />
+      </section>
+
+      <section>
+        <NewsLetter />
       </section>
       
       <section>

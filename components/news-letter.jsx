@@ -1,0 +1,47 @@
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+
+export function NewsLetter() {
+  return (
+    <section className="w-full pt-24 md:pt-32 lg:pt-40 xl:pt-48 pb-40 sm:pb-8 md:pb-8 lg:pb-8 xl:pb-10">
+      <div className="container px-4 md:px-6">
+        <div className="grid gap-6 items-center">
+          <div className="flex flex-col justify-center space-y-4 text-center">
+            <div className="space-y-2">
+            <h1
+              className="text-3xl font-semibold tracking-tight sm:text-5xl xl:text-6xl text-gray-800 dark:text-gray-200">
+              Sign up to our newsletter
+            </h1>
+
+              <p
+                className="max-w-[600px] text-gray-700 md:text-xl dark:text-gray-300 mx-auto">
+                Join us and take control of your inbox. Fast, secure, and designed for modern life.
+              </p>
+            </div>
+            <div className="w-full max-w-sm space-y-2 mx-auto">
+              <form className="flex space-x-2">
+                <Input
+                  className="max-w-lg flex-1 bg-gray-200 text-black border-gray-300 dark:bg-gray-800 dark:text-white dark:border-gray-700"
+                  placeholder="Enter your email"
+                  type="email" />
+                <Button className="bg-black text-white dark:bg-white dark:text-black" type="submit">
+                  Join Now
+                </Button>
+              </form>
+              <p className="text-xs text-gray-700 dark:text-gray-300">
+                Get ready to redefine your email experience.
+                <Link
+                  className="underline underline-offset-2 text-black dark:text-white"
+                  href="/terms"
+                  prefetch={false}>
+                  Terms & Conditions
+                </Link>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
