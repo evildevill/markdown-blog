@@ -1,8 +1,39 @@
+"use client";
+import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export function NewsLetter() {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (res.ok) {
+        setEmail("");
+        setMessage("Thank you for subscribing!");
+      } else {
+        const errorData = await res.json();
+        console.error("Error response:", errorData);
+        setMessage("Something went wrong, please try again.");
+      }
+    } catch (error) {
+      console.error("Fetch error:", error);
+      setMessage("Something went wrong, please try again.");
+    }
+  };
+
   return (
     <section className="w-full pt-24 md:pt-32 lg:pt-40 xl:pt-48 pb-40 sm:pb-8 md:pb-8 lg:pb-8 xl:pb-10">
       <div className="container px-4 md:px-6">
@@ -20,15 +51,22 @@ export function NewsLetter() {
               </p>
             </div>
             <div className="w-full max-w-sm space-y-2 mx-auto">
-              <form className="flex space-x-2">
+              <form className="flex space-x-2" onSubmit={handleSubmit}>
                 <Input
                   className="max-w-lg flex-1 bg-gray-200 text-black border-gray-300 dark:bg-gray-800 dark:text-white dark:border-gray-700"
                   placeholder="Enter your email"
-                  type="email" />
-                <Button className="bg-black text-white dark:bg-white dark:text-black" type="submit">
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                <Button
+                  className="bg-black text-white dark:bg-white dark:text-black"
+                  type="submit">
                   Join Now
                 </Button>
               </form>
+              {message && <p className="text-sm text-gray-700 dark:text-gray-300">{message}</p>}
               <p className="text-xs text-gray-700 dark:text-gray-300">
                 Get ready to redefine your email experience.
                 <Link

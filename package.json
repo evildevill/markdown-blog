@@ -23,6 +23,7 @@
     "lucide-react": "^0.445.0",
     "next": "14.2.13",
     "next-themes": "^0.3.0",
+    "nodemailer": "^6.9.15",
     "react": "^18",
     "react-dom": "^18",
     "react-top-loading-bar": "^2.3.1",
