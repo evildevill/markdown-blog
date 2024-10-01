@@ -94,7 +94,10 @@ export function Hero() {
           alt="Hero Image"
           width="500"
           height="500"
-          className="mx-auto aspect-square overflow-hidden rounded-xl object-cover" />
+          className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
+          priority
+        />
+
       </div>
     </section>)
   );
