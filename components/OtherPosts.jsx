@@ -21,7 +21,7 @@ export function OtherPosts({ currentSlug }) {
         {otherPosts.length > 0 ? (
           otherPosts.map((post, index) => (
             <div key={post.id || index} className="bg-white dark:bg-black rounded-lg shadow-md overflow-hidden">
-              <Link href={`/blogposts/${post.slug}`} prefetch={false}>
+              {/* <Link href={`/blogposts/${post.slug}`} prefetch={false}>
                 <Image
                   src={post.image}
                   alt={post.title}
@@ -31,7 +31,7 @@ export function OtherPosts({ currentSlug }) {
                   style={{ aspectRatio: '600/400', objectFit: 'cover' }}
                   priority
                 />
-              </Link>
+              </Link> */}
               <div className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="text-sm font-medium text-gray-500 dark:text-gray-400">
