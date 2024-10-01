@@ -36,7 +36,6 @@ export function TopBlog() {
                   height={400}
                   className="w-full h-48 object-cover"
                   style={{ aspectRatio: '600/400', objectFit: 'cover' }}
-                  priority={index === 0 ? true : false} // Set priority for the first image
                 />
               </Link>
               <div className="p-6">
