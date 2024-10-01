@@ -94,7 +94,9 @@ export function Hero() {
           alt="Hero Image"
           width="500"
           height="500"
-          className="mx-auto aspect-square overflow-hidden rounded-xl object-cover" />
+          className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
+          priority={index === 0 ? true : false} // Set priority for the first image
+        />
       </div>
     </section>)
   );
