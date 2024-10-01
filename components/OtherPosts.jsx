@@ -29,6 +29,7 @@ export function OtherPosts({ currentSlug }) {
                   height={400}
                   className="w-full h-48 object-cover"
                   style={{ aspectRatio: '600/400', objectFit: 'cover' }}
+                  priority
                 />
               </Link>
               <div className="p-6">
