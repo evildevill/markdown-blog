@@ -11,8 +11,6 @@ const blog = dirContent.map(file => {
   return data;
 }).sort((a, b) => new Date(b.date) - new Date(a.date)); // Sort by date (newest first)
 
-
-
 export const BlogPage = () => {
   return (
     <div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
@@ -35,6 +33,7 @@ export const BlogPage = () => {
                 height={400}
                 className="w-full h-48 object-cover"
                 style={{ aspectRatio: '600/400', objectFit: 'cover' }}
+                priority={index === 0 ? true : false} // Set priority for the first image
               />
             </Link>
             <div className="p-6">
