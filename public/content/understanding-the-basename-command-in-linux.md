@@ -129,7 +129,7 @@ That’s all for this guide! If you found it useful, make sure to share it with 
 
 Happy scripting!
 
-Thanks for reading this post, if you like my work you can support by [buying me a coffee](https://www.buymeacoffee.com/hackerwasii). ☕️
+Thanks for reading this post, if you like my work you can support by [Become a Patron!](https://www.patreon.com/hackerwasii)
 Read other posts
 
 ***

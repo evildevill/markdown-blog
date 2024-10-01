@@ -332,7 +332,7 @@ nuclei -u http://example.com/auth_path/ -t 403-bypass-nuclei-templates -tags fuz
 * [http methods](https://annevankesteren.nl/2007/10/http-methods)
 * [User-Agents fuzz.txt](https://github.com/danielmiessler/SecLists/blob/master/Fuzzing/User-Agents/UserAgents.fuzz.txt)
 
-Thanks for reading this post, if you like my work you can support by [buying me a coffee](https://www.buymeacoffee.com/hackerwasii). ☕️
+Thanks for reading this post, if you like my work you can support by [Become a Patron!](https://www.patreon.com/hackerwasii)
 Read other posts
 
 ***
