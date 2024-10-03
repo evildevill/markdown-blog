@@ -1,7 +1,9 @@
-# Block all crawlers for /accounts
-User-agent: *
-Disallow: /accounts
-
-# Allow all crawlers
+# *
 User-agent: *
 Allow: /
+
+# Host
+Host: https://blog.hackerwasii.com
+
+# Sitemaps
+Sitemap: https://blog.hackerwasii.com/sitemap.xml

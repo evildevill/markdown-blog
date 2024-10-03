@@ -21,7 +21,76 @@ export async function generateStaticParams() {
   }));
 }
 
-// This is a React Server Component that will render your blog post
+// Generate Metadata for SEO
+export async function generateMetadata({ params }) {
+  const { slug } = params;
+  const filepath = path.join("public/content", `${slug}.md`);
+
+  // Read the markdown file
+  let fileContent;
+  try {
+    fileContent = fs.readFileSync(filepath, "utf-8");
+  } catch (error) {
+    console.error(`Error reading file: ${error.message}`);
+    return {
+      title: "Blog Post Not Found",
+      description: "The requested blog post could not be found.",
+    };
+  }
+
+  const { data } = matter(fileContent);
+
+  // Use frontmatter for SEO data
+  const title = data.title || "Waseem Akram Blog";
+  const description =
+    data.description || "Explore the latest insights on Waseem Akram's blog.";
+  const author = data.author || "Waseem Akram";
+  const date = new Date(data.date).toISOString(); // Format the date
+  const image = data.image || "/default-image.webp"; // Fallback image
+  const url = `https://blog.hackerwasii.com/blogposts/${slug}`;
+
+  // Return metadata for SEO, OpenGraph, and Twitter
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "article",
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: `${title} cover image`,
+          type: "image/webp", // Use webp images
+        },
+      ],
+      publishedTime: date,
+      author,
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@wasii_254",
+      title,
+      description,
+      images: [image],
+    },
+    alternates: {
+      canonical: url, // Canonical URL for SEO
+    },
+    // JSON-LD structured data for blog posts
+    additionalMetaTags: [
+      {
+        name: "robots",
+        content: "index, follow", // Make sure search engines index this page
+      },
+    ],
+  };
+}
+
+// React server component for rendering the blog post
 export default async function Page({ params }) {
   const { slug } = params;
   const filepath = path.join("public/content", `${slug}.md`);
@@ -35,15 +104,13 @@ export default async function Page({ params }) {
   }
 
   const { content, data } = matter(fileContent);
-
-  const formattedDate =
-    data.date instanceof Date ? data.date.toLocaleDateString() : data.date;
+  const formattedDate = new Date(data.date).toLocaleDateString();
 
   const processor = unified()
     .use(remarkParse)
     .use(remarkRehype)
     .use(rehypeSlug)
-    .use(rehypeDocument, { title: "👋🌍" })
+    .use(rehypeDocument, { title: data.title })
     .use(rehypeFormat)
     .use(rehypeStringify)
     .use(rehypePrettyCode, {

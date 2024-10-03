@@ -20,6 +20,30 @@ const geistMono = localFont({
 export const metadata = {
   title: "Waseem Akram - Blog",
   description: "Portfolio and blog",
+  openGraph: {
+    title: "Waseem Akram - Blog",
+    description: "Portfolio and blog",
+    url: "https://blog.hackerwasii.com",
+    site_name: "Waseem Akram Blog",
+    images: [
+      {
+        url: "/cover.webp",
+        width: 1200,
+        height: 630,
+        alt: "Waseem Akram Blog Image",
+        type: "image/webp",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@wasii_254",
+    title: "Waseem Akram - Blog",
+    description: "Portfolio and blog",
+    images: ["/cover.webp"],
+    type: "image/webp",
+  },
 };
 
 export default function RootLayout({ children }) {
