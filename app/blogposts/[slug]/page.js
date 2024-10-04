@@ -47,7 +47,7 @@ export async function generateMetadata({ params }) {
   const author = data.author || "Waseem Akram";
   const date = new Date(data.date).toISOString(); // Format the date
   const image = data.image || "/default-image.webp"; // Fallback image
-  const url = `https://blog.hackerwasii.com/blogposts/${slug}`;
+  const url = `https://hackerwasii.com/blogposts/${slug}`;
 
   // Return metadata for SEO, OpenGraph, and Twitter
   return {

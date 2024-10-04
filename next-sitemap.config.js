@@ -23,7 +23,7 @@ const getPostSlugs = () => {
 };
 
 module.exports = {
-    siteUrl: 'https://blog.hackerwasii.com',
+    siteUrl: 'https://hackerwasii.com',
     generateRobotsTxt: true,
     exclude: ['/api/*'],
     additionalPaths: async (config) => {

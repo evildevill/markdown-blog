@@ -23,7 +23,7 @@ export const metadata = {
   openGraph: {
     title: "Waseem Akram - Blog",
     description: "Portfolio and blog",
-    url: "https://blog.hackerwasii.com",
+    url: "https://hackerwasii.com",
     site_name: "Waseem Akram Blog",
     images: [
       {
