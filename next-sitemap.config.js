@@ -16,7 +16,7 @@ const getPostSlugs = () => {
         const stats = fs.statSync(filePath); // Get file stats
 
         return {
-            loc: `/blog/${filename.replace('.md', '')}`, // Adjust for your slug structure
+            loc: `/blogposts/${filename.replace('.md', '')}`, // Adjust for your slug structure
             lastmod: stats.mtime.toISOString(), // Use the file's last modified time
         };
     });
