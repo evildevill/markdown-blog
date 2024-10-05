@@ -47,7 +47,7 @@ export function NewsLetter() {
 
               <p
                 className="max-w-[600px] text-gray-700 md:text-xl dark:text-gray-300 mx-auto">
-                Join us and take control of your inbox. Fast, secure, and designed for modern life.
+                Get the latest updates on tech, programming, and cybersecurity.
               </p>
             </div>
             <div className="w-full max-w-sm space-y-2 mx-auto">
@@ -68,12 +68,12 @@ export function NewsLetter() {
               </form>
               {message && <p className="text-sm text-gray-700 dark:text-gray-300">{message}</p>}
               <p className="text-xs text-gray-700 dark:text-gray-300">
-                Get ready to redefine your email experience.
+                 We respect your privacy. Your email will never be shared.
                 <Link
                   className="underline underline-offset-2 text-black dark:text-white"
                   href="/terms"
                   prefetch={false}>
-                  Terms & Conditions
+                  Terms
                 </Link>
               </p>
             </div>
