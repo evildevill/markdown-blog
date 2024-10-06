@@ -6,6 +6,7 @@ import { ModeToggle } from "./dark-switcher";
 import LoadingBar from 'react-top-loading-bar'
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { CommandDialogPopup } from "./command-dialog-popup";
 
 export function Navbar() {
 
@@ -76,19 +77,20 @@ export function Navbar() {
             prefetch={false}>
             Sign Up
           </Link>
+          <CommandDialogPopup />
           <ModeToggle />
         </div>
         <Drawer>
           <DrawerTrigger asChild>
             <Button variant="ghost" size="icon" className="lg:hidden">
               <MenuIcon className="h-6 w-6" />
-              <span className="sr-only">Toggle navigation menu</span>
+              {/* <span className="sr-only">Toggle navigation menu</span> */}
             </Button>
           </DrawerTrigger>
           <DrawerContent side="right">
-            <DrawerHeader>
+            {/* <DrawerHeader>
               <DrawerTitle>Menu</DrawerTitle>
-            </DrawerHeader>
+            </DrawerHeader> */}
             <div className="grid gap-4 p-4">
               <Link
                 href="/"
@@ -126,6 +128,7 @@ export function Navbar() {
                 prefetch={false}>
                 Sign Up
               </Link>
+              {/* <CommandDialogPopup /> */}
               <ModeToggle />
             </div>
           </DrawerContent>
