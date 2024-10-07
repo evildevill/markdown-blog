@@ -1,14 +1,13 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 import {
-  Calculator,
-  Calendar,
-  CreditCard,
-  Settings,
-  Smile,
+  // CreditCard,
+  // Settings,
   User,
-} from "lucide-react"
+  Bookmark,
+} from "lucide-react";
+import { useRouter } from "next/navigation"; // Import useRouter from Next.js
 
 import {
   CommandDialog,
@@ -19,22 +18,60 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/components/ui/command"
+} from "@/components/ui/command";
 
 export function CommandDialogPopup() {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = React.useState(false);
+  const [query, setQuery] = React.useState("");
+  const router = useRouter(); // Initialize useRouter
+
+  // Static pages
+  const staticPages = [
+    { icon: User, label: "About", path: "/about", shortcut: "⌘A" },
+    { icon: Bookmark, label: "Blog", path: "/blog", shortcut: "⌘B" },
+    // { icon: CreditCard, label: "Billing", path: "/billing", shortcut: "⌘B" },
+    // { icon: Settings, label: "Settings", path: "/settings", shortcut: "⌘S" },
+  ];
+
+  // Example blog posts
+  const blogPosts = [
+    { label: "How Hackers Target Instagram Accounts & Protect Yourself", slug: "/blogposts/how-hackers-target-instagram-accounts-protect-yourself-2024" },
+    { label: "Malware Development: How to Call Windows API from Go", slug: "/blogposts/malware-development-how-to-call-windows-api-from-go" },
+    { label: "Malware Development: Create Remote Thread Shellcode Injection Golang", slug: "/blogposts/malware-development-create-remote-thread-shellcode-injection-golang" },
+    { label: "Bug Bounty Resources", slug: "/blogposts/bugbounty-resources-2024" },
+    { label: "Steganography for Beginners", slug: "/blogposts/steganography-beginners" },
+    { label: "Resources", slug: "/blogposts/resources" },
+    { label: "Boom Bashed 🧨💥", slug: "/blogposts/boom-bashed" },
+    { label: "Active Directory Resources", slug: "/blogposts/active-directory-resources" },
+    { label: "Understanding the basename command in linux", slug: "/blogposts/understanding-the-basename-command-in-linux" },
+  ];
+
+  // Filter items based on the search query
+  const filteredStaticPages = staticPages.filter((page) =>
+    page.label.toLowerCase().includes(query.toLowerCase())
+  );
+
+  const filteredBlogPosts = blogPosts.filter((post) =>
+    post.label.toLowerCase().includes(query.toLowerCase())
+  );
+
+  // Handle navigation when an item is clicked
+  const handleNavigation = (path) => {
+    setOpen(false); // Close the command dialog after navigation
+    router.push(path); // Navigate to the page
+  };
 
   React.useEffect(() => {
     const down = (e) => {
-        if (e.key === "j" && (e.metaKey || e.ctrlKey)) {
-          e.preventDefault()
-          setOpen((open) => !open)
-        }
+      if (e.key === "j" && (e.metaKey || e.ctrlKey)) {
+        e.preventDefault();
+        setOpen((open) => !open);
       }
+    };
 
-    document.addEventListener("keydown", down)
-    return () => document.removeEventListener("keydown", down)
-  }, [])
+    document.addEventListener("keydown", down);
+    return () => document.removeEventListener("keydown", down);
+  }, []);
 
   return (
     <>
@@ -45,43 +82,49 @@ export function CommandDialogPopup() {
         </kbd>
       </p>
       <CommandDialog open={open} onOpenChange={setOpen}>
-        <CommandInput placeholder="Type a command or search..." />
+        <CommandInput
+          placeholder="Type a command or search..."
+          value={query}
+          onValueChange={setQuery}
+        />
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
-          <CommandGroup heading="Suggestions">
-            <CommandItem>
-              <Calendar className="mr-2 h-4 w-4" />
-              <span>Calendar</span>
-            </CommandItem>
-            <CommandItem>
-              <Smile className="mr-2 h-4 w-4" />
-              <span>Search Emoji</span>
-            </CommandItem>
-            <CommandItem>
-              <Calculator className="mr-2 h-4 w-4" />
-              <span>Calculator</span>
-            </CommandItem>
-          </CommandGroup>
+
+          {/* Blog Posts */}
+          {filteredBlogPosts.length > 0 && (
+            <CommandGroup heading="Blog Posts">
+              {filteredBlogPosts.map((post, index) => (
+                <CommandItem
+                  key={index}
+                  onSelect={() => handleNavigation(post.slug)} // Handle click
+                >
+                  <span>{post.label}</span>
+                </CommandItem>
+              ))}
+            </CommandGroup>
+          )}
+
           <CommandSeparator />
-          <CommandGroup heading="Settings">
-            <CommandItem>
-              <User className="mr-2 h-4 w-4" />
-              <span>Profile</span>
-              <CommandShortcut>⌘P</CommandShortcut>
-            </CommandItem>
-            <CommandItem>
-              <CreditCard className="mr-2 h-4 w-4" />
-              <span>Billing</span>
-              <CommandShortcut>⌘B</CommandShortcut>
-            </CommandItem>
-            <CommandItem>
-              <Settings className="mr-2 h-4 w-4" />
-              <span>Settings</span>
-              <CommandShortcut>⌘S</CommandShortcut>
-            </CommandItem>
-          </CommandGroup>
+
+          {/* Static Pages */}
+          {filteredStaticPages.length > 0 && (
+            <CommandGroup heading="Static Pages">
+              {filteredStaticPages.map((page, index) => (
+                <CommandItem
+                  key={index}
+                  onSelect={() => handleNavigation(page.path)} // Handle click
+                >
+                  <page.icon className="mr-2 h-4 w-4" />
+                  <span>{page.label}</span>
+                  {page.shortcut && (
+                    <CommandShortcut>{page.shortcut}</CommandShortcut>
+                  )}
+                </CommandItem>
+              ))}
+            </CommandGroup>
+          )}
         </CommandList>
       </CommandDialog>
     </>
-  )
+  );
 }
