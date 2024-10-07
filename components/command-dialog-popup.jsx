@@ -55,6 +55,9 @@ export function CommandDialogPopup() {
     post.label.toLowerCase().includes(query.toLowerCase())
   );
 
+  // Limit to showing only 4 blog posts initially in the popup
+  const limitedBlogPosts = query === "" ? blogPosts.slice(0, 4) : filteredBlogPosts;
+
   // Handle navigation when an item is clicked
   const handleNavigation = (path) => {
     setOpen(false); // Close the command dialog after navigation
@@ -91,9 +94,9 @@ export function CommandDialogPopup() {
           <CommandEmpty>No results found.</CommandEmpty>
 
           {/* Blog Posts */}
-          {filteredBlogPosts.length > 0 && (
+          {limitedBlogPosts.length > 0 && (
             <CommandGroup heading="Blog Posts">
-              {filteredBlogPosts.map((post, index) => (
+              {limitedBlogPosts.map((post, index) => (
                 <CommandItem
                   key={index}
                   onSelect={() => handleNavigation(post.slug)} // Handle click
