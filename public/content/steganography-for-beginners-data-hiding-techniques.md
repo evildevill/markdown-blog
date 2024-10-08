@@ -45,7 +45,7 @@ Point: 50
 
 Solution: Given was an amnesic.txt which we were unable to open with a text editor taking us to first challenge that it was not a text file.
 
-![](/images/posts/steganography/2.png)
+![](/images/posts/steganography/2.webp)
 
 with "file amnesic.txt" we came to know that it was an Image file. Renaming it with amnesic.jpeg gives us an image.
 
@@ -116,7 +116,7 @@ if "KJ_CTF{" in str2:
 print(str2)
 ```
 
-![](/images/posts/steganography/4.png)
+![](/images/posts/steganography/4.webp)
 
 ```
 Flag: KJ_CTF{yOu hAvE A gOoD DictIonAry}
@@ -136,14 +136,14 @@ Solution: The URL in the description of challenge took us to a website which was
 
 Cracking password always taught us to try default credentials for the fields.
 
-![](/images/posts/steganography/5.png)
+![](/images/posts/steganography/5.webp)
 
 ```
 user: admin
 password: admin
 ```
 
-![](/images/posts/steganography/6.png)
+![](/images/posts/steganography/6.webp)
 
 we got the flag
 
@@ -171,7 +171,7 @@ Caesar cipher was tested with all possible 26 keys but none of the outcomes were
 
 Coming to Rot13, when we decode the ciphertext, we get another set of meaningless ciphertext but when you search for KJ_CTF, you can find the flag in the decoded text.
 
-![](/images/posts/steganography/7.png)
+![](/images/posts/steganography/7.webp)
 
 ```
 Flag &#x2014; KJ_CTF{crypto_first_flag}
@@ -203,7 +203,7 @@ Solution: Mentioned that it was the easiest challenge for KJ CTF, we decoded the
 
 *PS: all the base64 encoding doesn't have = padding at the end.
 
-![](/images/posts/steganography/8.png)
+![](/images/posts/steganography/8.webp)
 
 ```
 Flag: KJ-CTF{KINDLYMAILYOURFEEDBACKTOANKK98@GMAIL.COM}
@@ -231,7 +231,7 @@ PS: Figured out JS Fuck by google search "[][(![]+[]) JS"
 
 You can further run the code in JS console or on jsfuck.com to get an alert for the flag.
 
-![](/images/posts/steganography/9.png)
+![](/images/posts/steganography/9.webp)
 
 ```
 Flag: KJ_JIIT{well_js_really_sucks}
@@ -261,7 +261,7 @@ Metadata of image can be checked with exiftool in Linux or there are various onl
 
 Here the website I used to get metadata. [http://metapicz.com/#landing](http://metapicz.com/#landing)
 
-![](/images/posts/steganography/11.png)
+![](/images/posts/steganography/11.webp)
 
 ```
 Flag &#x2014; KJ_CTF{h3R3_1_4M}
@@ -277,15 +277,15 @@ Point: 50
 
 Solution: After opening the flag.pdf file, we noticed "Can you krack it?" was written in text.
 
-![](/images/posts/steganography/12.png)
+![](/images/posts/steganography/12.webp)
 
 After converting that flag.pdf into text format we noticed this:
 
-![](/images/posts/steganography/13.png)
+![](/images/posts/steganography/13.webp)
 
 which gave us a hint that some type of file is embedded inside this pdf.
 
-![](/images/posts/steganography/14.png)
+![](/images/posts/steganography/14.webp)
 
 we tried a very popular steghide tool but no success.
 
@@ -296,7 +296,7 @@ qpdf &#x2014; qdf &#x2014; object-streams=disable flag.pdf out.pdf
 binwalk -Me out.pdf
 ```
 
-![](/images/posts/steganography/15.png)
+![](/images/posts/steganography/15.webp)
 
 ```
 Flag: KJ_CTF{THISISKRACKJIIT}
