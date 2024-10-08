@@ -39,11 +39,11 @@ export function CommandDialogPopup() {
     { label: "Malware Development: How to Call Windows API from Go", slug: "/blogposts/malware-development-how-to-call-windows-api-from-go" },
     { label: "Malware Development: Create Remote Thread Shellcode Injection Golang", slug: "/blogposts/malware-development-create-remote-thread-shellcode-injection-golang" },
     { label: "Bug Bounty Resources", slug: "/blogposts/bugbounty-resources-2024" },
-    { label: "Steganography for Beginners", slug: "/blogposts/steganography-beginners" },
     { label: "Resources", slug: "/blogposts/resources" },
     { label: "Boom Bashed 🧨💥", slug: "/blogposts/boom-bashed" },
     { label: "Active Directory Resources", slug: "/blogposts/active-directory-resources" },
     { label: "Understanding the basename command in linux", slug: "/blogposts/understanding-the-basename-command-in-linux" },
+    { label: "Steganography for Beginners - Data Hiding Techniques 🔏", slug: "/blogposts/steganography-for-beginners-data-hiding-techniques" },
   ];
 
   // Filter items based on the search query

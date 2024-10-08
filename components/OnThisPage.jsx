@@ -19,7 +19,7 @@ const OnThisPage = ({ htmlContent }) => {
 
   return (
     <div>
-      <h2 className="text-lg font-semibold mb-4">Table of Contents</h2>
+      <h2 className="text-lg font-semibold mb-4">On This Page</h2>
       <ul>
         {headingList.map(({ id, text, level }) => (
           <li key={id} className={`pl-${level === 'h2' ? 2 : level === 'h3' ? 4 : 0} py-1`}>
