@@ -46,7 +46,7 @@ export function ContactMe() {
   };
   
   return (
-    <div className="grid md:grid-cols-2 gap-8 w-full max-w-6xl mx-auto p-4 md:p-8 mt-12 mb-12">
+    <div className="grid md:grid-cols-2 gap-8 w-full max-w-6xl mx-auto p-4 md:p-8 mt-16 mb-16">
       <div className="space-y-6">
         <div className="space-y-2">
           <h2 className="text-3xl font-bold">Get in touch</h2>
