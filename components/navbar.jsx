@@ -7,6 +7,7 @@ import LoadingBar from 'react-top-loading-bar'
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { CommandDialogPopup } from "./command-dialog-popup";
+import {RegisterLink} from "@kinde-oss/kinde-auth-nextjs/components";
 
 export function Navbar() {
 
@@ -71,12 +72,14 @@ export function Navbar() {
             prefetch={false}>
             Store
           </Link>
-          <Link
+          <RegisterLink postLoginRedirectURL="/dashboard" className="inline-flex h-9 items-center justify-center rounded-md border border-input bg-transparent px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+            prefetch="false">Sign up</RegisterLink>
+          {/* <Link
             href="/signup"
             className="inline-flex h-9 items-center justify-center rounded-md border border-input bg-transparent px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
             prefetch={false}>
             Sign Up
-          </Link>
+          </Link> */}
           <CommandDialogPopup />
           <ModeToggle />
         </div>

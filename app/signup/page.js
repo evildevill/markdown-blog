@@ -22,7 +22,7 @@ const Signup = () => {
         <CardContent>
           <div className="grid gap-4">
             <Button variant="outline" className="w-full">
-             <RegisterLink postLoginRedirectURL="/welcome">Sign up</RegisterLink>
+             <RegisterLink postLoginRedirectURL="/dashboard">Sign up</RegisterLink>
             </Button>
           </div>
           <div className="mt-4 text-center text-sm">

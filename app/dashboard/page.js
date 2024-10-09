@@ -1,13 +1,14 @@
-import React from "react";
-import {LogoutLink} from "@kinde-oss/kinde-auth-nextjs/components";
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import Dashboard from "./Dashboard";
+import { redirect } from "next/navigation";
 
-const Dashboard = () => {
-  return (
-    <div>
-        <h2 className="text-5xl">Dashboard</h2>
-        <LogoutLink>Log out</LogoutLink>
-    </div>
-  )
-};
-
-export default Dashboard;
+export default async function DashboardPage() {
+  const session = await getKindeServerSession();
+  if (!session || !session.isAuthenticated()) {
+    // Redirect to login if no user is found
+    redirect("/");
+  }
+  // Await the user data
+  const user = await session.getUser();
+  return <Dashboard user={user} />;
+}
