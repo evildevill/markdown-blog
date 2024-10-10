@@ -9,40 +9,66 @@ const nextConfig = {
         source: "/product",
         destination:
           "/blogposts/how-hackers-target-instagram-accounts-protect-yourself-2024",
-        permanent: true, // This indicates a 301 permanent redirect
+        permanent: true, 
       },
       {
         source: "/posts/malware-development-how-to-call-windows-api-from-go",
         destination:
           "/blogposts/malware-development-how-to-call-windows-api-from-go",
-        permanent: true, // This indicates a 301 permanent redirect
+        permanent: true, 
       },
       {
         source:
           "/posts/malware-development-create-remote-thread-shellcode-injection-golang",
         destination:
           "/blogposts/malware-development-create-remote-thread-shellcode-injection-golang",
-        permanent: true, // This indicates a 301 permanent redirect
+        permanent: true, 
       },
       {
         source: "/posts/bugbounty-resources",
         destination: "/blogposts/bugbounty-resources-2024",
-        permanent: true, // This indicates a 301 permanent redirect
+        permanent: true, 
       },
       {
         source: "/posts/boom-bashed/",
         destination: "/blogposts/boom-bashed/",
-        permanent: true, // This indicates a 301 permanent redirect
+        permanent: true, 
       },
       {
         source: "/posts/steganography-beginners",
         destination: "/blogposts/steganography-beginners",
-        permanent: true, // This indicates a 301 permanent redirect
+        permanent: true, 
       },
       {
         source: "/resources",
         destination: "/blogposts/resources",
-        permanent: true, // This indicates a 301 permanent redirect
+        permanent: true, 
+      },
+    ];
+  },
+  async headers() {
+    return [
+      {
+        // Apply security headers to all routes
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'microphone=(), camera=()',
+          },
+        ],
       },
     ];
   },
