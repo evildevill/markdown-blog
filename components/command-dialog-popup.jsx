@@ -3,7 +3,7 @@
 import * as React from "react";
 import {
   // CreditCard,
-  // Settings,
+  Settings,
   User,
   Bookmark,
 } from "lucide-react";
@@ -29,8 +29,8 @@ export function CommandDialogPopup() {
   const staticPages = [
     { icon: User, label: "About", path: "/about", shortcut: "⌘A" },
     { icon: Bookmark, label: "Blog", path: "/blog", shortcut: "⌘B" },
+    { icon: Settings, label: "Dashboard", path: "/dashboard", shortcut: "⌘S" },
     // { icon: CreditCard, label: "Billing", path: "/billing", shortcut: "⌘B" },
-    // { icon: Settings, label: "Settings", path: "/settings", shortcut: "⌘S" },
   ];
 
   // Example blog posts
