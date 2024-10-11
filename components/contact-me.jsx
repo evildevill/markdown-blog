@@ -4,6 +4,8 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import contactAnimation from '@components/contact-animation.json';
+import Lottie from "lottie-react";
 
 export function ContactMe() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -96,15 +98,16 @@ export function ContactMe() {
           </Button>
         </form>
       </div>
-      <div className="h-[400px] md:h-auto">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8351288872545!2d-122.41697568471634!3d37.77493537975903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4b5b%3A0xb10ed6d9b5050fa5!2sVercel%20HQ!5e0!3m2!1sen!2sus!4v1681927012613!5m2!1sen!2sus"
-          className="w-full h-full rounded-lg"
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
-      </div>
+      {/* Lottie Animation */}
+        <div className="h-[400px] md:h-auto pl-28 md:block hidden">
+          <Lottie
+            animationData={contactAnimation} // Correctly reference your JSON file
+            loop={true} // Proper loop prop usage
+            className="w-full h-full"
+            style={{ maxWidth: '400px' }}
+            preload="auto"
+          />
+        </div>
     </div>
   );
 }
