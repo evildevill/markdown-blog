@@ -8,8 +8,11 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { CommandDialogPopup } from "./command-dialog-popup";
 import { RegisterLink } from "@kinde-oss/kinde-auth-nextjs/components";
+import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 
 export function Navbar() {
+  const { isAuthenticated } = useKindeBrowserClient();
+  const shouldPrefetch = false;
 
   const [progress, setProgress] = useState(0)
   const pathname = usePathname()
@@ -37,7 +40,7 @@ export function Navbar() {
     (<header className="w-full shadow bg-background/50 sticky top-0 backdrop-blur z-10">
       <LoadingBar color="#F35051" progress={progress} onLoaderFinished={() => setProgress(0)} />
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center gap-2" prefetch={false}>
+        <Link href="/" className="flex items-center gap-2" prefetch={shouldPrefetch ? true : undefined}>
           <MountainIcon className="h-6 w-6" />
           <span className="font-bold">Waseem Akram</span>
         </Link>
@@ -45,35 +48,51 @@ export function Navbar() {
           <Link
             href="/"
             className="inline-flex h-9 items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-            prefetch={false}>
+            prefetch={shouldPrefetch ? true : undefined}>
             Home
           </Link>
           <Link
             href="/about"
             className="inline-flex h-9 items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-            prefetch={false}>
+            prefetch={shouldPrefetch ? true : undefined}>
             About
           </Link>
           <Link
             href="/blog"
             className="inline-flex h-9 items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-            prefetch={false}>
+            prefetch={shouldPrefetch ? true : undefined}>
             Blog
           </Link>
           <Link
             href="/contact"
             className="inline-flex h-9 items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-            prefetch={false}>
+            prefetch={shouldPrefetch ? true : undefined}>
             Contact
           </Link>
           <Link
             href="https://www.patreon.com/hackerwasii/shop"
             className="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-            prefetch={false}>
+            prefetch={shouldPrefetch ? true : undefined}>
             Store
           </Link>
-          <RegisterLink postLoginRedirectURL="/dashboard" className="inline-flex h-9 items-center justify-center rounded-md border border-input bg-transparent px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-            prefetch="false">Sign up</RegisterLink>
+          {/* Conditional rendering for signup or dashboard link */}
+          {/* <RegisterLink postLoginRedirectURL="/dashboard" className="inline-flex h-9 items-center justify-center rounded-md border border-input bg-transparent px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+            prefetch={shouldPrefetch ? true : undefined}>Sign up</RegisterLink> */}
+          {isAuthenticated ? (
+            <Link
+              href="/dashboard"
+              className="inline-flex h-9 items-center justify-center rounded-md border border-input bg-transparent px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+              prefetch={shouldPrefetch ? true : undefined}>
+              Dashboard
+            </Link>
+          ) : (
+            <RegisterLink
+              postLoginRedirectURL="/dashboard"
+              className="inline-flex h-9 items-center justify-center rounded-md border border-input bg-transparent px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+              prefetch={shouldPrefetch ? true : undefined}>
+              Sign up
+            </RegisterLink>
+          )}
           <CommandDialogPopup />
           <ModeToggle />
         </div>
@@ -92,35 +111,51 @@ export function Navbar() {
               <Link
                 href="/"
                 className="inline-flex h-9 items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                prefetch={false}>
+                prefetch={shouldPrefetch ? true : undefined}>
                 Home
               </Link>
               <Link
                 href="/about"
                 className="inline-flex h-9 items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                prefetch={false}>
+                prefetch={shouldPrefetch ? true : undefined}>
                 About
               </Link>
               <Link
                 href="/blog"
                 className="inline-flex h-9 items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                prefetch={false}>
+                prefetch={shouldPrefetch ? true : undefined}>
                 Blog
               </Link>
               <Link
                 href="/contact"
                 className="inline-flex h-9 items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                prefetch={false}>
+                prefetch={shouldPrefetch ? true : undefined}>
                 Contact
               </Link>
               <Link
                 href="https://www.patreon.com/hackerwasii/shop"
                 className="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                prefetch={false}>
+                prefetch={shouldPrefetch ? true : undefined}>
                 Store
               </Link>
-              <RegisterLink postLoginRedirectURL="/dashboard" className="inline-flex h-9 items-center justify-center rounded-md border border-input bg-transparent px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50" 
-              prefetch="false">Sign up</RegisterLink>
+              {/* Conditional rendering for signup or dashboard link */}
+              {/* <RegisterLink postLoginRedirectURL="/dashboard" className="inline-flex h-9 items-center justify-center rounded-md border border-input bg-transparent px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50" 
+              prefetch={shouldPrefetch ? true : undefined}>Sign up</RegisterLink> */}
+              {isAuthenticated ? (
+                <Link
+                  href="/dashboard"
+                  className="inline-flex h-9 items-center justify-center rounded-md border border-input bg-transparent px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                  prefetch={shouldPrefetch ? true : undefined}>
+                  Dashboard
+                </Link>
+              ) : (
+                <RegisterLink
+                  postLoginRedirectURL="/dashboard"
+                  className="inline-flex h-9 items-center justify-center rounded-md border border-input bg-transparent px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                  prefetch={shouldPrefetch ? true : undefined}>
+                  Sign up
+                </RegisterLink>
+              )}
               {/* <CommandDialogPopup /> */}
               <ModeToggle />
             </div>
