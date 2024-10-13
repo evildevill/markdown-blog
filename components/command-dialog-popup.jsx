@@ -6,6 +6,7 @@ import {
   Settings,
   User,
   Bookmark,
+  Phone,
 } from "lucide-react";
 import { useRouter } from "next/navigation"; // Import useRouter from Next.js
 
@@ -30,6 +31,10 @@ export function CommandDialogPopup() {
     { icon: User, label: "About", path: "/about", shortcut: "⌘A" },
     { icon: Bookmark, label: "Blog", path: "/blog", shortcut: "⌘B" },
     { icon: Settings, label: "Dashboard", path: "/dashboard", shortcut: "⌘S" },
+    { icon: Bookmark, label: "Privacy Policy", path: "/legal/privacy-policy", shortcut: "⌘P" },
+    { icon: Bookmark, label: "Terms of Service", path: "/legal/terms", shortcut: "⌘T" },
+    { icon: Settings, label: "Settings", path: "/dashboard/settings", shortcut: "⌘S" },
+    { icon: Phone, label: "Contact", path: "/contact", shortcut: "⌘C" },
     // { icon: CreditCard, label: "Billing", path: "/billing", shortcut: "⌘B" },
   ];
 
