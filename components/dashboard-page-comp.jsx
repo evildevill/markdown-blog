@@ -89,9 +89,11 @@ export function DashboardPageComp({ user }) {
               <div className="text-sm text-muted-foreground">{user?.email}</div>
             </div>
           </div>
-          <Button variant="outline" size="sm" className="ml-auto">
-            Settings
-          </Button>
+          <Link className="ml-auto" href="/dashboard/settings" prefetch={false}>
+            <Button variant="outline" size="sm" >
+              Settings
+            </Button>
+          </Link>
         </header>
         <main className="flex-1 p-4 sm:px-6 sm:py-0">
           <div className="grid gap-4">
