@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Terms = () => {
@@ -145,19 +146,104 @@ const Terms = () => {
           <h2 className="text-2xl font-semibold mb-2">6. SUBSCRIPTIONS</h2>
           <h3 className="text-sm font-bold mb-3">Billing and Renewal</h3>
           <p className="text-base">
-          Your subscription will continue and automatically renew unless canceled. You consent to our charging your payment method on a recurring basis without requiring your prior approval for each recurring charge, until such time as you cancel the applicable order. The length of your billing cycle is monthly.
+            Your subscription will continue and automatically renew unless canceled. You consent to our charging your payment method on a recurring basis without requiring your prior approval for each recurring charge, until such time as you cancel the applicable order. The length of your billing cycle is monthly.
           </p>
           <br />
           <h3 className="text-sm font-bold mb-3">Cancellation</h3>
           <p className="text-base">
-          All purchases are non-refundable. You can cancel your subscription at any time by logging into your account. Your cancellation will take effect at the end of the current paid term. If you have any questions or are unsatisfied with our Services, please email us at hello@hackerwasii.com.
+            All purchases are non-refundable. You can cancel your subscription at any time by logging into your account. Your cancellation will take effect at the end of the current paid term. If you have any questions or are unsatisfied with our Services, please email us at hello@hackerwasii.com.
           </p>
           <br />
           <h3 className="text-sm font-bold mb-3">Fee Changes</h3>
           <p className="text-base">
-          We may, from time to time, make changes to the subscription fee and will communicate any price changes to you in accordance with applicable law.
+            We may, from time to time, make changes to the subscription fee and will communicate any price changes to you in accordance with applicable law.
           </p>
         </section>
+        <section className="mb-4">
+          <h2 className="text-2xl font-semibold mb-2">7. SOFTWARE</h2>
+          <h3 className="text-sm font-bold mb-3">Billing and Renewal</h3>
+          <p className="text-base">
+            We may include software for use in connection with our Services. If such software is accompanied by an end user license agreement (&quot;EULA&quot;), the terms of the EULA will govern your use of the software. If such software is not accompanied by a EULA, then we grant to you a non-exclusive, revocable, personal, and non-transferable license to use such software solely in connection with our services and in accordance with these Legal Terms. Any software and any related documentation is provided &quot;AS IS&quot; without warranty of any kind, either express or implied, including, without limitation, the implied warranties of merchantability, fitness for a particular purpose, or non-infringement. You accept any and all risk arising out of use or performance of any software. You may not reproduce or redistribute any software except in accordance with the EULA or these Legal Terms.
+          </p>
+        </section>
+        <section className="mb-4">
+          <h2 className="text-2xl font-semibold mb-2">1. SOCIAL MEDIA</h2>
+          <h3 className="text-sm font-bold mb-3">Connecting Third-Party Accounts</h3>
+          <p className="text-base">
+            As part of the functionality of the Services, you may link your account with online accounts you have with third-party service providers (each such account, a &quot;Third-Party Account&quot;). By granting us access to any Third-Party Accounts, you acknowledge that we may access, make available, and store any content from your Third-Party Account. Your relationship with the third-party service providers is governed solely by your agreements with them.
+          </p>
+        </section>
+
+        <section className="mb-4">
+          <h2 className="text-2xl font-semibold mb-2">12. ADVERTISERS</h2>
+          <h3 className="text-sm font-bold mb-3">Advertising Space</h3>
+          <p className="text-base">
+            We allow advertisers to display their advertisements in certain areas of the Services. We provide the space for these advertisements and have no other relationship with advertisers.
+          </p>
+        </section>
+
+        <section className="mb-4">
+          <h2 className="text-2xl font-semibold mb-2">1. PRIVACY POLICY</h2>
+          <h3 className="text-sm font-bold mb-3">Data Privacy and Security</h3>
+          <p className="text-base">
+            We care about data privacy and security. Please review our <Link href="https://hackerwasii.com/legal/privacy-policy">
+              <span className="text-blue-600 underline">Privacy Policy</span>
+            </Link>. By using the Services, you agree to be bound by our Privacy Policy, which is incorporated into these Legal Terms. Please be advised the Services are hosted in the United States. If you access the Services from any other region of the world with laws or other requirements governing personal data collection, use, or disclosure that differ from applicable laws in the United States, then through your continued use of the Services, you are transferring your data to the United States, and you expressly consent to have your data transferred to and processed in the United States.
+          </p>
+        </section>
+
+        <section className="mb-4">
+          <h2 className="text-2xl font-semibold mb-2">15. TERM AND TERMINATION</h2>
+          <p className="text-base">
+            These Legal Terms shall remain in full force and effect while you use the Services. WITHOUT LIMITING ANY OTHER PROVISION OF THESE LEGAL TERMS, WE RESERVE THE RIGHT TO, IN OUR SOLE DISCRETION AND WITHOUT NOTICE OR LIABILITY, DENY ACCESS TO AND USE OF THE SERVICES (INCLUDING BLOCKING CERTAIN IP ADDRESSES), TO ANY PERSON FOR ANY REASON OR FOR NO REASON, INCLUDING WITHOUT LIMITATION FOR BREACH OF ANY REPRESENTATION, WARRANTY, OR COVENANT CONTAINED IN THESE LEGAL TERMS OR OF ANY APPLICABLE LAW OR REGULATION. WE MAY TERMINATE YOUR USE OR PARTICIPATION IN THE SERVICES OR DELETE YOUR ACCOUNT AND ANY CONTENT OR INFORMATION THAT YOU POSTED AT ANY TIME, WITHOUT WARNING, IN OUR SOLE DISCRETION. <br /><br />
+            If we terminate or suspend your account for any reason, you are prohibited from registering and creating a new account under your name, a fake or borrowed name, or the name of any third party, even if you may be acting on behalf of the third party. In addition to terminating or suspending your account, we reserve the right to take appropriate legal action, including without limitation pursuing civil, criminal, and injunctive redress.
+          </p>
+        </section>
+
+        <section className="mb-4">
+          <h2 className="text-2xl font-semibold mb-2">16. MODIFICATIONS AND INTERRUPTIONS</h2>
+          <p className="text-base">
+            We reserve the right to change, modify, or remove the contents of the Services at any time or for any reason at our sole discretion without notice. However, we have no obligation to update any information on our Services. We will not be liable to you or any third party for any modification, price change, suspension, or discontinuance of the Services.
+            <br /><br />
+            We cannot guarantee the Services will be available at all times. We may experience hardware, software, or other problems or need to perform maintenance related to the Services, resulting in interruptions, delays, or errors. We reserve the right to change, revise, update, suspend, discontinue, or otherwise modify the Services at any time or for any reason without notice to you. You agree that we have no liability whatsoever for any loss, damage, or inconvenience caused by your inability to access or use the Services during any downtime or discontinuance of the Services. Nothing in these Legal Terms will be construed to obligate us to maintain and support the Services or to supply any corrections, updates, or releases in connection therewith.
+          </p>
+        </section>
+
+        <section className="mb-4">
+          <h2 className="text-2xl font-semibold mb-2">1. CORRECTIONS</h2>
+          <p className="text-base">
+            There may be information on the Services that contains typographical errors, inaccuracies, or omissions, including descriptions, pricing, availability, and various other information. We reserve the right to correct any errors, inaccuracies, or omissions and to change or update the information on the Services at any time, without prior notice.
+          </p>
+        </section>
+
+        <section className="mb-4">
+          <h2 className="text-2xl font-semibold mb-2">20. DISCLAIMER</h2>
+          <p className="text-base">
+            THE SERVICES ARE PROVIDED ON AN AS-IS AND AS-AVAILABLE BASIS. YOU AGREE THAT YOUR USE OF THE SERVICES WILL BE AT YOUR SOLE RISK. TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, IN CONNECTION WITH THE SERVICES AND YOUR USE THEREOF, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE MAKE NO WARRANTIES OR REPRESENTATIONS ABOUT THE ACCURACY OR COMPLETENESS OF THE SERVICES CONTENT OR THE CONTENT OF ANY WEBSITES OR MOBILE APPLICATIONS LINKED TO THE SERVICES AND WE WILL ASSUME NO LIABILITY OR RESPONSIBILITY FOR ANY (1) ERRORS, MISTAKES, OR INACCURACIES OF CONTENT AND MATERIALS, (2) PERSONAL INJURY OR PROPERTY DAMAGE, OF ANY NATURE WHATSOEVER, RESULTING FROM YOUR ACCESS TO AND USE OF THE SERVICES, (3) ANY UNAUTHORIZED ACCESS TO OR USE OF OUR SECURE SERVERS AND/OR ANY AND ALL PERSONAL INFORMATION AND/OR FINANCIAL INFORMATION STORED THEREIN, (4) ANY INTERRUPTION OR CESSATION OF TRANSMISSION TO OR FROM THE SERVICES, (5) ANY BUGS, VIRUSES, TROJAN HORSES, OR THE LIKE WHICH MAY BE TRANSMITTED TO OR THROUGH THE SERVICES BY ANY THIRD PARTY, AND/OR (6) ANY ERRORS OR OMISSIONS IN ANY CONTENT AND MATERIALS OR FOR ANY LOSS OR DAMAGE OF ANY KIND INCURRED AS A RESULT OF THE USE OF ANY CONTENT POSTED, TRANSMITTED, OR OTHERWISE MADE AVAILABLE VIA THE SERVICES. WE DO NOT WARRANT, ENDORSE, GUARANTEE, OR ASSUME RESPONSIBILITY FOR ANY PRODUCT OR SERVICE ADVERTISED OR OFFERED BY A THIRD PARTY THROUGH THE SERVICES, ANY HYPERLINKED WEBSITE, OR ANY WEBSITE OR MOBILE APPLICATION FEATURED IN ANY BANNER OR OTHER ADVERTISING, AND WE WILL NOT BE A PARTY TO OR IN ANY WAY BE RESPONSIBLE FOR MONITORING ANY TRANSACTION BETWEEN YOU AND ANY THIRD-PARTY PROVIDERS OF PRODUCTS OR SERVICES. AS WITH THE PURCHASE OF A PRODUCT OR SERVICE THROUGH ANY MEDIUM OR IN ANY ENVIRONMENT, YOU SHOULD USE YOUR BEST JUDGMENT AND EXERCISE CAUTION WHERE APPROPRIATE.
+          </p>
+        </section>
+
+        <section className="mb-4">
+          <h2 className="text-2xl font-semibold mb-2">1. USER DATA</h2>
+          <p className="text-base">
+            We will maintain certain data that you transmit to the Services for the purpose of managing the performance of the Services, as well as data relating to your use of the Services. Although we perform regular routine backups of data, you are solely responsible for all data that you transmit or that relates to any activity you have undertaken using the Services. You agree that we shall have no liability to you for any loss or corruption of any such data, and you hereby waive any right of action against us arising from any such loss or corruption of such data.
+          </p>
+        </section>
+
+        <section className="mb-4">
+          <h2 className="text-2xl font-semibold mb-2">1. CONTACT US</h2>
+          <h3 className="text-sm font-bold mb-3">Get in Touch</h3>
+          <p className="text-base">
+            To resolve a complaint regarding the Services or to receive further information, please contact us at:
+            <br />
+            Waseem Akram, Pakistan
+            <br />
+            <Link href="mailto:hello@hackerwasii.com">
+              <span className="text-blue-600 underline">hello@hackerwasii.com</span>
+            </Link>
+          </p>
+        </section>
+
       </div>
     </div>
   );
