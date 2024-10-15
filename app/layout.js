@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { FooterBar } from "@/components/footer-bar";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -64,6 +65,7 @@ export default function RootLayout({ children }) {
           <SpeedInsights />
           <FooterBar />
         </ThemeProvider>
+        <GoogleAnalytics gaId="G-0PCVFG8BNK" />
       </body>
     </html>
   );
