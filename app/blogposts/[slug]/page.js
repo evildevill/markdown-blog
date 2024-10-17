@@ -12,6 +12,7 @@ import { unified } from "unified";
 import { transformerCopyButton } from "@rehype-pretty/transformers";
 import OnThisPage from "@/components/OnThisPage";
 import { OtherPosts } from "@/components/OtherPosts"; // Import the OtherPosts component
+import { Separator } from "@/components/ui/separator";
 
 // This function generates the static paths for each blog post
 export async function generateStaticParams() {
@@ -143,9 +144,9 @@ export default async function Page({ params }) {
           </p>
 
           {/* Blog content */}
-          
+
           {/* OnThisPage below content for mobile */}
-          
+
           <div className="block lg:hidden mt-8">
             <OnThisPage htmlContent={htmlContent} />
           </div>
@@ -163,7 +164,9 @@ export default async function Page({ params }) {
           <OnThisPage htmlContent={htmlContent} />
         </aside>
       </div>
-
+      <div className="pt-6">
+        <Separator className="" />
+      </div>
       <div>
         <OtherPosts currentSlug={slug} />
       </div>
