@@ -41,10 +41,11 @@ export function CommandDialogPopup() {
   // Example blog posts
   const blogPosts = [
     { label: "How Hackers Target Instagram Accounts & Protect Yourself", slug: "/blogposts/how-hackers-target-instagram-accounts-protect-yourself-2024" },
-    { label: "Malware Development: How to Call Windows API from Go", slug: "/blogposts/malware-development-how-to-call-windows-api-from-go" },
-    { label: "Malware Development: Create Remote Thread Shellcode Injection Golang", slug: "/blogposts/malware-development-create-remote-thread-shellcode-injection-golang" },
-    { label: "Malware Development 3 - Persistence via Recycle Bin (Golang)", slug: "/blogposts/malware-development-3-persistence-via-recycle-bin-golang" },
+    { label: "Malware Development 0: How to Call Windows API from Go", slug: "/blogposts/malware-development-how-to-call-windows-api-from-go" },
+    { label: "Malware Development 1: Create Remote Thread Shellcode Injection Golang", slug: "/blogposts/malware-development-create-remote-thread-shellcode-injection-golang" },
     { label: "Malware Development 2 UuidFromString shellcode injection (Golang)", slug: "/blogposts/malware-development-uuidfromstring-shellcode-injection-golang" },
+    { label: "Malware Development 3 - Persistence via Recycle Bin (Golang)", slug: "/blogposts/malware-development-3-persistence-via-recycle-bin-golang" },
+    { label: "Malware Development 4 - Dump lsass.exe process + AV/EDR evasion (Golang)", slug: "/blogposts/malware-development-4-dump-lsassexe-process-avedr-evasion-golang" },
     { label: "Bug Bounty Resources", slug: "/blogposts/bugbounty-resources-2024" },
     { label: "Resources", slug: "/blogposts/resources" },
     { label: "Boom Bashed 🧨💥", slug: "/blogposts/boom-bashed" },
