@@ -160,7 +160,7 @@ export default async function Page({ params }) {
         </div>
 
         {/* Sidebar for larger screens */}
-        <aside className="hidden lg:block w-64 sticky top-16">
+        <aside className="hidden lg:block w-64 sticky top-16 h-screen">
           <OnThisPage htmlContent={htmlContent} />
         </aside>
       </div>
