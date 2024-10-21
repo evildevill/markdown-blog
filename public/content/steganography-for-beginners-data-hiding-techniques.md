@@ -247,7 +247,7 @@ Category: Medium
 
 Point: 100
 
-![](/images/posts/steganography/10.jpeg)
+![](/images/posts/steganography/10.webp)
 
 BBB.jpg Solution: Viewing the image gave no hits all red.
 
@@ -312,7 +312,7 @@ Point: 100
 
 Solution: After opening this challenge link we got a .gif format file.
 
-![](/images/posts/steganography/16.gif)
+![](/images/posts/steganography/16.webp)
 
 iamnotwhatilooklike.gif This image was looking like a QR code but colorful.
 
@@ -322,11 +322,11 @@ I don't know why this challenge was in Medium Category. It was super easy.
 
 Just open images.google.com and upload that image.
 
-![](/images/posts/steganography/17.png)
+![](/images/posts/steganography/17.webp)
 
 And after uploading that image we got the flag. SERIOUSLY WTF!!!!!!!!
 
-![](/images/posts/steganography/18.png)
+![](/images/posts/steganography/18.webp)
 
 It was written "Hello, world!" in Piet programming language
 
@@ -344,7 +344,7 @@ Point: 100
 
 Solution: After opening the link we noticed that a sound was playing
 
-![](/images/posts/steganography/19.png)
+![](/images/posts/steganography/19.webp)
 
 checked source code of the page and got this sound file
 
@@ -356,7 +356,7 @@ I remember when I was a kid, I visit the police station where my dad works and t
 
 So searched on google: "Morse sound to text converter" and uploaded that file on [https://morsecode.scphillips.com/labs/audio-decoder-adaptive/](https://morsecode.scphillips.com/labs/audio-decoder-adaptive/)
 
-![](/images/posts/steganography/20.png)
+![](/images/posts/steganography/20.webp)
 
 ```
 Result: PIKAPIKACHUU
@@ -364,11 +364,11 @@ Result: PIKAPIKACHUU
 
 Got the result from that sound file, But that was not a flag and value adminwas not editable. So tried to intercepting the request with Burp Suite.
 
-![](/images/posts/steganography/21.png)
+![](/images/posts/steganography/21.webp)
 
 Entered the output of morse code in pass= parameter and forward the request.
 
-![](/images/posts/steganography/22.png)
+![](/images/posts/steganography/22.webp)
 
 Achieved flag on the next page.
 
@@ -414,11 +414,11 @@ Points: 50
 
 Solution: The first thing done was visiting the link provided to us, it was a basic webpage with a link given Watch Me! of a youtube video.
 
-![](/images/posts/steganography/23.jpeg)
+![](/images/posts/steganography/23.webp)
 
 But since we were playing the CTF I thought why not see the source code of the website before enjoying some youtube videos? And voila!!! we got our flag!!!
 
-![](/images/posts/steganography/24.jpeg)
+![](/images/posts/steganography/24.webp)
 
 After that, I opened the video and guess what?? the link was of the trailer of the movie "Source Code".
 
@@ -430,7 +430,7 @@ Flag: KJ_CTF{n00bs_lOvees_b00}
 
 Challenge Description: This challenge was categorized under Cryptography, the description provided was nothing but what is the meaning of cryptography? Other than that an image was provided (can we call it a cipher?).
 
-![](/images/posts/steganography/25.jpeg)
+![](/images/posts/steganography/25.webp)
 
 Link of the image: [https://drive.google.com/file/d/1AvVJLzJUx1BAuoN1vEAyjcsLEKntpHS4/view?usp=sharing](https://drive.google.com/file/d/1AvVJLzJUx1BAuoN1vEAyjcsLEKntpHS4/view?usp=sharing)
 
