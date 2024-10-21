@@ -4,7 +4,7 @@ description: "Cloud computing refers to the delivery of computing services over 
 slug: "what-is-cloud-computing"
 date: "2024-03-01"
 author: "Waseem Akram"
-image: "/placeholder.svg"
+image: "/images/posts/cloud/thumb01.webp"
 ---
 
 Cloud computing refers to the delivery of computing services over the internet ("the cloud"). These services include servers, storage, databases, networking, software, analytics, and more. Rather than owning physical data centers or servers, organizations and individuals can rent access to anything from applications to storage from a cloud service provider.

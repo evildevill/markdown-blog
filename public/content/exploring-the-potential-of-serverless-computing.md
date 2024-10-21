@@ -4,7 +4,7 @@ description: "Serverless computing is a cloud computing model that allows develo
 slug: "exploring-the-potential-of-serverless-computing"
 date: "2023-03-01"
 author: "Michael Johnson"
-image: "/placeholder.svg"
+image: "/images/posts/cloud/thumb02.webp"
 ---
 
 Serverless computing is a cloud computing model that allows developers to build and run applications without having to manage the underlying infrastructure. In this article, we'll explore the potential of serverless computing and discuss how it can help you build better, more scalable applications.

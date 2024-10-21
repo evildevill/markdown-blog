@@ -4,7 +4,7 @@ description: "Bashed is a retired HackTheBox machine, rated easy and rightfully.
 slug: "boom-bashed"
 date: "2021-07-16"
 author: "Waseem Akram"
-image: "/placeholder.svg"
+image: "/images/posts/boom-bashed/thumb.webp"
 ---
 
 Bashed is a retired HackTheBox machine, rated easy and rightfully. We'll start by finding a hidden web shell to quickly gaining root level access due to misconfigured permissions to users.

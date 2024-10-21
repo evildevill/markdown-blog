@@ -24,7 +24,7 @@ export function TopBlog() {
       </div>
 
       {/* Blog Cards Section */}
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {recentPosts.length > 0 ? (
           recentPosts.map((post, index) => (
             <div key={post.id || index} className="bg-white dark:bg-black rounded-lg shadow-md overflow-hidden">

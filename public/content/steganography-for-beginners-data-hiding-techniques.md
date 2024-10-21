@@ -4,7 +4,7 @@ description: "The basename command in Linux is used to extract the last element 
 slug: "steganography-for-beginners-data-hiding-techniques"
 date: "2019-02-07"
 author: "Waseem Akram"
-image: "/images/posts/basename/basename.png"
+image: "/images/posts/steganography/thumb.webp"
 ---
 
 Steganography is the technique of hiding secret data within an ordinary, non-secret, file or message in order to avoid detection; the secret data is then extracted at its destination... The word steganography is derived from the Greek words steganos (meaning hidden or covered) and the Greek root graph (meaning to write) - Wikipedia.

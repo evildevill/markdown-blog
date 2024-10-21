@@ -4,7 +4,7 @@ description: "This post contains Active Directory Pentesting resources to prepar
 slug: "active-directory-resources"
 date: "2022-01-09"
 author: "Waseem Akram"
-image: "/images/posts/bugbounty/bugbounty.png"
+image: "/images/posts/resources/thumb-active.webp"
 ---
 
 This post contains Active Directory Pentesting resources to prepare for new OSCP (2022) exam.

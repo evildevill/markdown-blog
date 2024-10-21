@@ -4,7 +4,7 @@ description: "The basename command in Linux is used to extract the last element 
 slug: "understanding-the-basename-command-in-linux"
 date: "2024-09-28"
 author: "Waseem Akram"
-image: "/images/posts/basename/basename.png"
+image: "/images/posts/basename/thumb.webp"
 ---
 
 The `basename` command in Linux is used to extract the last element of a file path. This is particularly helpful in bash scripts where you only need the filename or directory name from a full path. The `basename` command can be used in various ways to manipulate file paths and extract specific parts of the path. Additionally, it allows you to remove file extensions or suffixes.
