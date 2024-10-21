@@ -78,7 +78,7 @@ export function DashboardPageComp({ user }) {
       </aside>
       <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
         <header
-          className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
+          className="sticky top-0 z-0 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
           <div className="flex items-center gap-4">
             <Avatar className="h-8 w-8">
               <AvatarImage src={user.picture} alt="user-image" />
@@ -101,7 +101,7 @@ export function DashboardPageComp({ user }) {
               <h1 className="text-2xl font-bold">Welcome back, {user?.given_name}!</h1>
               <p className="text-muted-foreground text-sm">Here is a quick overview of your account and recent activity.</p>
             </div>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {/* <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between pb-2">
                   <CardTitle className="text-sm font-medium">Recent Activity</CardTitle>
@@ -234,7 +234,7 @@ export function DashboardPageComp({ user }) {
                   </div>
                 </CardContent>
               </Card>
-            </div>
+            </div> */}
           </div>
         </main>
       </div>
