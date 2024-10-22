@@ -71,7 +71,7 @@ export function NewsLetter() {
                  We respect your privacy. Your email will never be shared.
                 <Link
                   className="underline underline-offset-2 text-black dark:text-white"
-                  href="/terms"
+                  href="/legal/terms"
                   prefetch={false}>
                   Terms
                 </Link>
