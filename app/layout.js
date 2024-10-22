@@ -19,19 +19,19 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Waseem Akram - Blog",
-  description: "Portfolio and blog",
+  title: "Waseem Akram – Researcher, Pentester, Dev",
+  description: "I am a developer, pentester, and researcher sharing insights on technology, software development, and cybersecurity. Explore my blog and portfolio for projects, tutorials, and industry knowledge.",
   openGraph: {
-    title: "Waseem Akram - Blog",
-    description: "Portfolio and blog",
+    title: "WWaseem Akram – Researcher, Pentester, Dev",
+    description: "I am a developer, pentester, and researcher sharing insights on technology, software development, and cybersecurity. Explore my blog and portfolio for projects, tutorials, and industry knowledge.",
     url: "https://hackerwasii.com",
-    site_name: "Waseem Akram Blog",
+    site_name: "Waseem Akram – Researcher, Pentester, Dev",
     images: [
       {
         url: "/cover.webp",
         width: 1200,
         height: 630,
-        alt: "Waseem Akram Blog Image",
+        alt: "Waseem Akram – Researcher, Pentester, Dev Image",
         type: "image/webp",
       },
     ],
@@ -40,8 +40,8 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@wasii_254",
-    title: "Waseem Akram - Blog",
-    description: "Portfolio and blog",
+    title: "Waseem Akram – Researcher, Pentester, Dev",
+    description: "I am a developer, pentester, and researcher sharing insights on technology, software development, and cybersecurity. Explore my blog and portfolio for projects, tutorials, and industry knowledge.",
     images: ["/cover.webp"],
     type: "image/webp",
   },
