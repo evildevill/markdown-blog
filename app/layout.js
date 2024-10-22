@@ -22,7 +22,7 @@ export const metadata = {
   title: "Waseem Akram – Researcher, Pentester, Dev",
   description: "I am a developer, pentester, and researcher sharing insights on technology, software development, and cybersecurity. Explore my blog and portfolio for projects, tutorials, and industry knowledge.",
   openGraph: {
-    title: "WWaseem Akram – Researcher, Pentester, Dev",
+    title: "Waseem Akram – Researcher, Pentester, Dev",
     description: "I am a developer, pentester, and researcher sharing insights on technology, software development, and cybersecurity. Explore my blog and portfolio for projects, tutorials, and industry knowledge.",
     url: "https://hackerwasii.com",
     site_name: "Waseem Akram – Researcher, Pentester, Dev",
