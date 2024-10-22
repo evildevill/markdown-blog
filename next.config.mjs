@@ -44,6 +44,11 @@ const nextConfig = {
         destination: "/blogposts/resources",
         permanent: true,
       },
+      {
+        source: "/posts",
+        destination: "/blog",
+        permanent: true,
+      },
     ];
   },
   async headers() {
