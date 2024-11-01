@@ -1,53 +1,54 @@
 import nodemailer from 'nodemailer';
+import crypto from 'crypto';
 
-// Create an in-memory rate limit store
 const rateLimitStore = new Map();
-const RATE_LIMIT_COUNT = 1; // Max submissions per day
-const RATE_LIMIT_DURATION = 24 * 60 * 60 * 1000; // 1 day in milliseconds
+const RATE_LIMIT_COUNT = 1;
+const RATE_LIMIT_DURATION = 24 * 60 * 60 * 1000;
 
 export async function POST(req) {
     try {
         const { reason, additionalFeedback } = await req.json();
-        // Validate input
-        if (!reason) {
-            return new Response(JSON.stringify({ message: 'Reason is required.' }), {
+
+        // Basic validation and sanitization
+        if (!reason || typeof reason !== 'string' || reason.length > 500) {
+            return new Response(JSON.stringify({ message: 'Invalid input.' }), {
                 status: 400,
                 headers: { 'Content-Type': 'application/json' },
             });
         }
-        // Get IP from request headers (assuming a reverse proxy is not involved; adjust if necessary)
-        const clientIp = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || req.connection.remoteAddress;
-        // Check rate limit
-        const now = Date.now();
-        const rateLimitData = rateLimitStore.get(clientIp) || { count: 0, lastAttempt: now };
 
-        // Reset the count if the last attempt was more than a day ago
+        const clientIp = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || req.connection.remoteAddress;
+        const hashedIp = crypto.createHash('sha256').update(clientIp).digest('hex');
+
+        const now = Date.now();
+        const rateLimitData = rateLimitStore.get(hashedIp) || { count: 0, lastAttempt: now };
+
         if (now - rateLimitData.lastAttempt > RATE_LIMIT_DURATION) {
             rateLimitData.count = 0;
             rateLimitData.lastAttempt = now;
         }
-        // Increment the count
+
         rateLimitData.count += 1;
         rateLimitData.lastAttempt = now;
-        rateLimitStore.set(clientIp, rateLimitData);
-        // Check if the rate limit has been exceeded
+        rateLimitStore.set(hashedIp, rateLimitData);
+
         if (rateLimitData.count > RATE_LIMIT_COUNT) {
             return new Response(JSON.stringify({ message: 'Rate limit exceeded. Please try again tomorrow.' }), {
                 status: 429,
                 headers: { 'Content-Type': 'application/json' },
             });
         }
-        // Respond immediately to the client
+
         const immediateResponse = new Response(JSON.stringify({ message: 'Feedback submitted successfully.' }), {
             status: 200,
             headers: { 'Content-Type': 'application/json' },
         });
-        // Run email sending in a separate asynchronous process
-        sendFeedbackEmail(reason, additionalFeedback);
 
+        sendFeedbackEmail(sanitizeInput(reason), sanitizeInput(additionalFeedback || 'N/A'));
         return immediateResponse;
+
     } catch (error) {
-        console.error(error);
+        console.error("Error processing feedback:", error);
         return new Response(JSON.stringify({ message: 'Failed to process feedback.' }), {
             status: 500,
             headers: { 'Content-Type': 'application/json' },
@@ -55,32 +56,36 @@ export async function POST(req) {
     }
 }
 
-// Background function to send the email
 async function sendFeedbackEmail(reason, additionalFeedback) {
     try {
-        // Configure email transport
         const transporter = nodemailer.createTransport({
             host: process.env.EMAIL_SERVER,
-            port: parseInt(process.env.EMAIL_PORT), // Convert port to number
-            secure: false, // true for 465, false for other ports
+            port: parseInt(process.env.EMAIL_PORT),
+            secure: true,
             auth: {
                 user: process.env.EMAIL_USER,
                 pass: process.env.EMAIL_PASS,
             },
+            tls: {
+                rejectUnauthorized: true,
+            },
         });
 
-        // Email options
         const mailOptions = {
             from: process.env.EMAIL_USER,
-            to: 'hello@hackerwasii.com', // Your email to receive feedback
+            to: process.env.FEEDBACK_EMAIL_RECIPIENT || 'hello@hackerwasii.com',
             subject: 'Uninstall Feedback',
-            text: `Reason: ${reason}\nAdditional Feedback: ${additionalFeedback || 'N/A'}`,
+            text: `Reason: ${reason}\nAdditional Feedback: ${additionalFeedback}`,
         };
-
-        // Send email in the background
+        
         await transporter.sendMail(mailOptions);
         console.log("Email sent successfully.");
     } catch (error) {
         console.error("Failed to send feedback email:", error);
     }
+}
+
+// Input sanitization function
+function sanitizeInput(input) {
+    return input.replace(/<[^>]*>?/gm, ''); // Remove any HTML tags
 }
