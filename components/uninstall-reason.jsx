@@ -55,7 +55,7 @@ export function UninstallReason() {
     <div className="flex min-h-[100dvh] flex-col items-center justify-center bg-background px-4 py-12 sm:px-6 lg:px-8">
       <div className="mx-auto w-full max-w-md space-y-6">
         <div className="text-center">
-          <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">We&apos;re sorry to see you go</h1>
+          <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">We&apos;re sorry to see you go. 🙂💔</h1>
           <p className="mt-2 text-muted-foreground">Please let us know why you&apos;re uninstalling so we can improve.</p>
         </div>
         <Card>
