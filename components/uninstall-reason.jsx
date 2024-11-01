@@ -5,7 +5,6 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 
 export function UninstallReason() {
   const [reason, setReason] = useState("other");
@@ -37,6 +36,8 @@ export function UninstallReason() {
 
       if (response.ok) {
         setMessage(result.message); // Set success message
+        setReason("other"); // Reset reason
+        setComments(""); // Reset comments
       } else {
         setError(true); // Set error state
         setMessage(result.message); // Show error message
@@ -53,7 +54,7 @@ export function UninstallReason() {
       <div className="mx-auto w-full max-w-md space-y-6">
         <div className="text-center">
           <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">We&apos;re sorry to see you go</h1>
-          <p className="mt-2 text-muted-foreground">Please let us know why you&apos;re uninstalling so we can improve.</p>
+          <p className="mt-2 text-muted-foreground">Please let me know why you&apos;re uninstalling so i can improve.</p>
         </div>
         <Card >
           <CardContent className="grid gap-4">
@@ -99,16 +100,6 @@ export function UninstallReason() {
             {message}
           </div>
         )}
-        <div className="flex justify-center">
-          <Image
-            src="/placeholder.svg"
-            alt="Feedback icon"
-            width="100"
-            height="100"
-            className="text-muted-foreground"
-            style={{ aspectRatio: "100/100", objectFit: "cover" }}
-          />
-        </div>
       </div>
     </div>
   );

@@ -12,7 +12,29 @@ export async function POST(req) {
             });
         }
 
-        // Configure your email transport
+        // Respond immediately to the client
+        const immediateResponse = new Response(JSON.stringify({ message: 'Feedback submitted successfully.' }), {
+            status: 200,
+            headers: { 'Content-Type': 'application/json' },
+        });
+
+        // Run email sending in a separate asynchronous process
+        sendFeedbackEmail(reason, additionalFeedback);
+
+        return immediateResponse;
+    } catch (error) {
+        console.error(error);
+        return new Response(JSON.stringify({ message: 'Failed to process feedback.' }), {
+            status: 500,
+            headers: { 'Content-Type': 'application/json' },
+        });
+    }
+}
+
+// Background function to send the email
+async function sendFeedbackEmail(reason, additionalFeedback) {
+    try {
+        // Configure email transport
         const transporter = nodemailer.createTransport({
             host: process.env.EMAIL_SERVER,
             port: parseInt(process.env.EMAIL_PORT), // Convert port to number
@@ -31,18 +53,10 @@ export async function POST(req) {
             text: `Reason: ${reason}\nAdditional Feedback: ${additionalFeedback || 'N/A'}`,
         };
 
-        // Send email
+        // Send email in the background
         await transporter.sendMail(mailOptions);
-
-        return new Response(JSON.stringify({ message: 'Feedback submitted successfully.' }), {
-            status: 200,
-            headers: { 'Content-Type': 'application/json' },
-        });
+        console.log("Email sent successfully.");
     } catch (error) {
-        console.error(error);
-        return new Response(JSON.stringify({ message: 'Failed to submit feedback.' }), {
-            status: 500,
-            headers: { 'Content-Type': 'application/json' },
-        });
+        console.error("Failed to send feedback email:", error);
     }
 }
