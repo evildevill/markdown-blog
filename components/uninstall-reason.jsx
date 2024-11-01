@@ -11,13 +11,14 @@ export function UninstallReason() {
   const [comments, setComments] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setMessage(""); // Clear previous message
     setError(false); // Clear previous error
+    setLoading(true);
 
-    // Prepare the feedback data
     const feedbackData = {
       reason,
       additionalFeedback: comments,
@@ -35,17 +36,18 @@ export function UninstallReason() {
       const result = await response.json();
 
       if (response.ok) {
-        setMessage(result.message); // Set success message
-        setReason("other"); // Reset reason
-        setComments(""); // Reset comments
+        setMessage("Feedback submitted successfully!");
+        setReason("other");
+        setComments("");
       } else {
-        setError(true); // Set error state
-        setMessage(result.message); // Show error message
+        setError(true);
+        setMessage(result.message || "An error occurred.");
       }
     } catch (err) {
-      console.error(err);
-      setError(true); // Set error state
-      setMessage("Failed to submit feedback."); // Generic error message
+      setError(true);
+      setMessage("Failed to submit feedback.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -54,9 +56,9 @@ export function UninstallReason() {
       <div className="mx-auto w-full max-w-md space-y-6">
         <div className="text-center">
           <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">We&apos;re sorry to see you go</h1>
-          <p className="mt-2 text-muted-foreground">Please let me know why you&apos;re uninstalling so i can improve.</p>
+          <p className="mt-2 text-muted-foreground">Please let us know why you&apos;re uninstalling so we can improve.</p>
         </div>
-        <Card >
+        <Card>
           <CardContent className="grid gap-4">
             <form onSubmit={handleSubmit}>
               <div className="grid gap-2 mt-5">
@@ -64,7 +66,7 @@ export function UninstallReason() {
                 <Select
                   id="reason"
                   value={reason}
-                  onValueChange={setReason} // Update reason on selection
+                  onValueChange={setReason}
                 >
                   <SelectTrigger>
                     <SelectValue placeholder="Select a reason" />
@@ -86,11 +88,13 @@ export function UninstallReason() {
                   placeholder="Let us know how we can improve"
                   rows={4}
                   value={comments}
-                  onChange={(e) => setComments(e.target.value)} // Update comments on input
+                  onChange={(e) => setComments(e.target.value)}
                 />
               </div>
               <CardFooter className="flex justify-end mt-5">
-                <Button type="submit">Submit Feedback</Button>
+                <Button type="submit" className="w-full" disabled={loading}>
+                  {loading ? "Submitting..." : "Submit Feedback"}
+                </Button>
               </CardFooter>
             </form>
           </CardContent>
@@ -98,7 +102,7 @@ export function UninstallReason() {
         {message && (
           <div className={`mt-4 text-center ${error ? "text-red-500" : "text-green-500"}`}>
             {message}
-          </div>
+          </div> 
         )}
       </div>
     </div>
