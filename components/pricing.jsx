@@ -1,40 +1,44 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function Pricing() {
   return (
-    (<section
+    <section
       className="min-h-screen w-full py-12 bg-background dark:bg-background flex items-center justify-center">
       <div className="container px-4 md:px-6">
         <div className="text-center space-y-2 mb-8">
-          <h2 className="text-3xl font-bold text-foreground dark:text-card-foreground">Pricing</h2>
-          <p className="text-muted-foreground">Choose the plan that suits you best</p>
+          <h2 className="text-3xl font-bold text-foreground dark:text-card-foreground">Support Me on Patreon</h2>
+          <p className="text-muted-foreground">Choose a plan to support my work on cybersecurity and tech content</p>
         </div>
         <div className="grid grid-cols-1 gap-6 mt-8 md:grid-cols-3 md:gap-8">
           <div
             className="flex flex-col p-6 bg-card shadow-lg rounded-lg dark:bg-card-dark justify-between border border-muted">
             <div>
               <h3
-                className="text-2xl font-bold text-center text-foreground dark:text-card-foreground">Basic</h3>
+                className="text-2xl font-bold text-center text-foreground dark:text-card-foreground">You&apos;re Great!</h3>
               <div className="mt-4 text-center text-muted-foreground">
-                <span className="text-4xl font-bold">$29</span>/ month
+                <span className="text-4xl font-bold">$5</span>/ month
               </div>
               <ul className="mt-4 space-y-2">
                 <li className="flex items-center">
                   <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
-                  720p Video Rendering
+                  Access to Patreon-only posts
                 </li>
                 <li className="flex items-center">
                   <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
-                  2GB Cloud Storage
+                  Early access to blog content
                 </li>
                 <li className="flex items-center">
                   <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
-                  Basic Video Templates
+                  Monthly cybersecurity newsletter
                 </li>
               </ul>
             </div>
             <div className="mt-6">
-              <Button className="w-full">Get Started</Button>
+              <Link href="https://www.patreon.com/c/hackerwasii/membership"
+                prefetch={false}>
+                <Button className="w-full">Join Now</Button>
+              </Link>
             </div>
           </div>
           <div
@@ -45,77 +49,79 @@ export function Pricing() {
             </div>
             <div>
               <h3
-                className="text-2xl font-bold text-center text-foreground dark:text-card-foreground">Pro</h3>
+                className="text-2xl font-bold text-center text-foreground dark:text-card-foreground">You&apos;re Awesome!</h3>
               <div className="mt-4 text-center text-muted-foreground">
-                <span className="text-4xl font-bold">$59</span>/ month
+                <span className="text-4xl font-bold">$15</span>/ month
               </div>
               <ul className="mt-4 space-y-2">
                 <li className="flex items-center">
-                  <CheckIcon className="text-white text-2xs bg-green-500 rounded-full mr-2 p-1" />
-                  1080p Video Rendering
+                  <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
+                  Everything in &apos;You&apos;re Great!&apos; tier
                 </li>
                 <li className="flex items-center">
                   <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
-                  10GB Cloud Storage
+                  Exclusive cybersecurity tutorials
                 </li>
                 <li className="flex items-center">
                   <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
-                  Premium Video Templates
+                  Access to private Discord chat
                 </li>
                 <li className="flex items-center">
                   <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
-                  Collaboration Tools
+                  Direct Q&A session each month
                 </li>
               </ul>
             </div>
             <div className="mt-6">
-              <Button className="w-full bg-gradient-to-r from-pink-500 to-purple-500">Get Started</Button>
+              <Link href="https://www.patreon.com/c/hackerwasii/membership"
+                prefetch={false}>
+                <Button className="w-full bg-gradient-to-r from-pink-500 to-purple-500">Join Now</Button>
+              </Link>
             </div>
           </div>
           <div
             className="flex flex-col p-6 bg-card shadow-lg rounded-lg dark:bg-card-dark justify-between border border-muted">
             <div>
               <h3
-                className="text-2xl font-bold text-center text-foreground dark:text-card-foreground">Enterprise</h3>
+                className="text-2xl font-bold text-center text-foreground dark:text-card-foreground">You&apos;re FANTASTIC!</h3>
               <div className="mt-4 text-center text-muted-foreground">
-                <span className="text-4xl font-bold">$99</span>/ month
+                <span className="text-4xl font-bold">$25</span>/ month
               </div>
               <ul className="mt-4 space-y-2">
                 <li className="flex items-center">
                   <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
-                  4K Video Rendering
+                  Everything in &quot;You&apos;re Awesome!&quot; tier
                 </li>
                 <li className="flex items-center">
                   <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
-                  Unlimited Cloud Storage
+                  Monthly one-on-one Q&A sessions
                 </li>
                 <li className="flex items-center">
                   <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
-                  Custom Video Templates
+                  Personalized cybersecurity advice
                 </li>
                 <li className="flex items-center">
                   <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
-                  Advanced Collaboration Tools
-                </li>
-                <li className="flex items-center">
-                  <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
-                  Dedicated Support
+                  Priority WhatsApp support
                 </li>
               </ul>
             </div>
             <div className="mt-6">
-              <Button className="w-full">Get Started</Button>
+              <Link href="https://www.patreon.com/c/hackerwasii/membership"
+                prefetch={false}>
+                <Button className="w-full">Join Now</Button>
+              </Link>
             </div>
           </div>
         </div>
       </div>
-    </section>)
+    </section>
   );
 }
 
 function CheckIcon(props) {
   return (
-    (<svg
+    <svg
       {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -127,6 +133,6 @@ function CheckIcon(props) {
       strokeLinecap="round"
       strokeLinejoin="round">
       <path d="M20 6 9 17l-5-5" />
-    </svg>)
+    </svg>
   );
 }
