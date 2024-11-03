@@ -34,7 +34,7 @@ export function TopBlog() {
                   alt={post.title}
                   width={600}
                   height={400}
-                  className="w-full h-48 object-cover hidden sm:block""
+                  className="w-full h-48 object-cover md:block hidden"
                   style={{ aspectRatio: '600/400', objectFit: 'cover' }}
                 />
               </Link>
