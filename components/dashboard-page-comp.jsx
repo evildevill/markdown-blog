@@ -3,7 +3,7 @@ import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/comp
 import Link from "next/link"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
+// import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import { LoginLink } from "@kinde-oss/kinde-auth-nextjs/components";
@@ -49,6 +49,18 @@ export function DashboardPageComp({ user }) {
                 </Link>
               </TooltipTrigger>
               <TooltipContent side="right">Notifications</TooltipContent>
+            </Tooltip>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link
+                  href="/dashboard/api-key"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                  prefetch={false}>
+                  <LockIcon className="h-5 w-5" />
+                  <span className="sr-only">API key</span>
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent side="right">API key</TooltipContent>
             </Tooltip>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -265,8 +277,7 @@ function BellIcon(props) {
   );
 }
 
-
-function ChevronRightIcon(props) {
+function LockIcon(props) {
   return (
     (<svg
       {...props}
@@ -279,32 +290,49 @@ function ChevronRightIcon(props) {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round">
-      <path d="m9 18 6-6-6-6" />
+      <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
     </svg>)
   );
 }
 
+// function ChevronRightIcon(props) {
+//   return (
+//     (<svg
+//       {...props}
+//       xmlns="http://www.w3.org/2000/svg"
+//       width="24"
+//       height="24"
+//       viewBox="0 0 24 24"
+//       fill="none"
+//       stroke="currentColor"
+//       strokeWidth="2"
+//       strokeLinecap="round"
+//       strokeLinejoin="round">
+//       <path d="m9 18 6-6-6-6" />
+//     </svg>)
+//   );
+// }
 
-function FilePenIcon(props) {
-  return (
-    (<svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round">
-      <path d="M12 22h6a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v10" />
-      <path d="M14 2v4a2 2 0 0 0 2 2h4" />
-      <path d="M10.4 12.6a2 2 0 1 1 3 3L8 21l-4 1 1-4Z" />
-    </svg>)
-  );
-}
-
+// function FilePenIcon(props) {
+//   return (
+//     (<svg
+//       {...props}
+//       xmlns="http://www.w3.org/2000/svg"
+//       width="24"
+//       height="24"
+//       viewBox="0 0 24 24"
+//       fill="none"
+//       stroke="currentColor"
+//       strokeWidth="2"
+//       strokeLinecap="round"
+//       strokeLinejoin="round">
+//       <path d="M12 22h6a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v10" />
+//       <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+//       <path d="M10.4 12.6a2 2 0 1 1 3 3L8 21l-4 1 1-4Z" />
+//     </svg>)
+//   );
+// }
 
 function HomeIcon(props) {
   return (
@@ -324,7 +352,6 @@ function HomeIcon(props) {
     </svg>)
   );
 }
-
 
 function LogOutIcon(props) {
   return (
@@ -346,7 +373,6 @@ function LogOutIcon(props) {
   );
 }
 
-
 function MessageCircleIcon(props) {
   return (
     (<svg
@@ -364,7 +390,6 @@ function MessageCircleIcon(props) {
     </svg>)
   );
 }
-
 
 function SettingsIcon(props) {
   return (
@@ -386,23 +411,22 @@ function SettingsIcon(props) {
   );
 }
 
-
-function UploadIcon(props) {
-  return (
-    (<svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round">
-      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-      <polyline points="17 8 12 3 7 8" />
-      <line x1="12" x2="12" y1="3" y2="15" />
-    </svg>)
-  );
-}
+// function UploadIcon(props) {
+//   return (
+//     (<svg
+//       {...props}
+//       xmlns="http://www.w3.org/2000/svg"
+//       width="24"
+//       height="24"
+//       viewBox="0 0 24 24"
+//       fill="none"
+//       stroke="currentColor"
+//       strokeWidth="2"
+//       strokeLinecap="round"
+//       strokeLinejoin="round">
+//       <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+//       <polyline points="17 8 12 3 7 8" />
+//       <line x1="12" x2="12" y1="3" y2="15" />
+//     </svg>)
+//   );
+// }

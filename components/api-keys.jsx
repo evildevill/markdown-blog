@@ -39,7 +39,7 @@ export function ApiKeys() {
     }
   }
   return (
-    (<Card className="w-full max-w-md mx-auto mt-28 mb-60">
+    (<Card className="w-full max-w-md mx-auto mt-28 mb-48">
       <div className="text-center text-2xl font-bold mt-6">Beta feature</div> 
       <CardHeader>
         <CardTitle>API Generation</CardTitle>
