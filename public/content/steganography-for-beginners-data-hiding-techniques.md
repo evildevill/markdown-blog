@@ -432,7 +432,7 @@ Challenge Description: This challenge was categorized under Cryptography, the de
 
 ![](/images/posts/steganography/25.webp)
 
-Link of the image: [https://drive.google.com/file/d/1AvVJLzJUx1BAuoN1vEAyjcsLEKntpHS4/view?usp=sharing](Google Drive)
+Link of the image: [Google Drive](https://drive.google.com/file/d/1AvVJLzJUx1BAuoN1vEAyjcsLEKntpHS4/view?usp=sharing)
 
 Type: flag
 
