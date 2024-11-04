@@ -9,7 +9,7 @@ import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import { LoginLink } from "@kinde-oss/kinde-auth-nextjs/components";
 
 export function DashboardPageComp({ user }) {
-  
+
   const { isAuthenticated, isLoading } = useKindeBrowserClient();
   if (isLoading) return <div>Loading...</div>
 
@@ -112,6 +112,13 @@ export function DashboardPageComp({ user }) {
             <div className="grid gap-2">
               <h1 className="text-2xl font-bold">Welcome back, {user?.given_name}!</h1>
               <p className="text-muted-foreground text-sm">Here is a quick overview of your account and recent activity.</p>
+            </div>
+            <div className="grid gap-2">
+              <Link className="ml" href="/dashboard/api-key" prefetch={false}>
+                <Button className="w-fit">
+                  Get Your API Key
+                </Button>
+              </Link>
             </div>
             {/* <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               <Card>
