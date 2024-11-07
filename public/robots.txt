@@ -1,5 +1,11 @@
-# *
+# Disallow specific pages
 User-agent: *
+Disallow: /dashboard
+Disallow: /dashboard/settings
+Disallow: /dashboard/api-key
+Disallow: /uninstall-reason
+
+# Allow everything else
 Allow: /
 
 # Host
