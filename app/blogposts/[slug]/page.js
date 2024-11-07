@@ -127,6 +127,16 @@ export default async function Page({ params }) {
 
   const htmlContent = (await processor.process(content)).toString();
 
+  // Split content into paragraphs and inject ads
+  const paragraphs = htmlContent.split("</p>");
+  const contentWithAds = paragraphs.map((paragraph, index) => (
+    <div key={index}>
+      <div dangerouslySetInnerHTML={{ __html: paragraph + "</p>" }} />
+      {(index + 1) % 2 === 0 && <AdUnit />}{" "}
+      {/* Insert AdUnit every 2 paragraphs */}
+    </div>
+  ));
+
   return (
     <div className="max-w-7xl mx-auto p-6">
       {/* Flexbox layout for responsiveness */}
@@ -144,20 +154,16 @@ export default async function Page({ params }) {
             {data.description}
           </p>
 
-          {/* Blog content */}
-          <AdUnit />
           {/* OnThisPage below content for mobile */}
-
           <div className="block lg:hidden mt-8">
             <OnThisPage htmlContent={htmlContent} />
           </div>
 
-          <div
-            className="prose dark:prose-invert mt-6"
-            dangerouslySetInnerHTML={{ __html: htmlContent }}
-          />
+          {/* Blog content */}
+            <AdUnit />
 
-
+          {/* Render content with ads */}
+          <div className="prose dark:prose-invert mt-6">{contentWithAds}</div>
         </div>
 
         {/* Sidebar for larger screens */}
