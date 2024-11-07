@@ -1,6 +1,24 @@
 import Link from "next/link";
 import React from "react";
 
+export const metadata = {
+  title: "Terms of Service - Waseem Akram",
+  description: "Read the Terms of Service for Waseem Akram's platform, outlining the rules, guidelines, and obligations for using our services.",
+  openGraph: {
+    title: "Terms of Service - Waseem Akram",
+    description: "Read the Terms of Service for Waseem Akram's platform, outlining the rules, guidelines, and obligations for using our services.",
+    url: "https://hackerwasii.com/legal/terms",
+    siteName: "Waseem Akram – Researcher, Pentester, Dev",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms of Service - Waseem Akram",
+    description: "Read the Terms of Service for Waseem Akram's platform, outlining the rules, guidelines, and obligations for using our services.",
+    creator: "@wasii_254",
+  },
+};
+
 const Terms = () => {
   return (
     <div className="p-8 min-h-screen">

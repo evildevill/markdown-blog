@@ -1,6 +1,25 @@
 import Link from "next/link";
 import React from "react";
 
+export const metadata = {
+  title: "Privacy Policy - Waseem Akram",
+  description: "Understand how Waseem Akram's platform collects, uses, and protects your data. Read our Privacy Policy to learn about our commitment to safeguarding your information.",
+  openGraph: {
+    title: "Privacy Policy - Waseem Akram",
+    description: "Understand how Waseem Akram's platform collects, uses, and protects your data. Read our Privacy Policy to learn about our commitment to safeguarding your information.",
+    url: "https://hackerwasii.com/legal/privacy-policy",
+    siteName: "Waseem Akram – Researcher, Pentester, Dev",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy - Waseem Akram",
+    description: "Understand how Waseem Akram's platform collects, uses, and protects your data. Read our Privacy Policy to learn about our commitment to safeguarding your information.",
+    creator: "@wasii_254",
+  },
+};
+
+
 const PrivacyPolicy = () => {
   return (
     <div className="p-8 min-h-screen">

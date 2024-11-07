@@ -4,6 +4,8 @@ Disallow: /dashboard
 Disallow: /dashboard/settings
 Disallow: /dashboard/api-key
 Disallow: /uninstall-reason
+Disallow: /legal/privacy-policy
+Disallow: /legal/terms
 
 # Allow everything else
 Allow: /
