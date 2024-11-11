@@ -49,11 +49,6 @@ const nextConfig = {
         destination: "/blog",
         permanent: true,
       },
-      {
-        source: "/resume",
-        destination: "/about",
-        permanent: true,
-      },
     ];
   },
   async headers() {

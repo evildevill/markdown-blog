@@ -70,11 +70,11 @@ export function AboutPage() {
       <div className="grid gap-4 md:grid-cols-2">
         <div className="p-4 bg-muted rounded-md text-center">
           <h4 className="text-sm font-medium">YouTube Subscribers</h4>
-          <p className="text-2xl font-bold">2.5k</p>
+          <p className="text-2xl font-bold">2.54k</p>
         </div>
         <div className="p-4 bg-muted rounded-md text-center">
           <h4 className="text-sm font-medium">Video Views</h4>
-          <p className="text-2xl font-bold">21k</p>
+          <p className="text-2xl font-bold">40.2k</p>
         </div>
       </div>
       

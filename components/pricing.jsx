@@ -60,6 +60,10 @@ export function Pricing() {
                 </li>
                 <li className="flex items-center">
                   <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
+                  Ads Free Experience
+                </li>
+                <li className="flex items-center">
+                  <CheckIcon className="text-white text-xs bg-green-500 rounded-full mr-2 p-1" />
                   Exclusive cybersecurity tutorials
                 </li>
                 <li className="flex items-center">
@@ -75,7 +79,7 @@ export function Pricing() {
             <div className="mt-6">
               <Link href="https://www.patreon.com/c/hackerwasii/membership"
                 prefetch={false}>
-                <Button className="w-full bg-gradient-to-r from-pink-500 to-purple-500">Join Now</Button>
+                <Button className="w-full bg-gradient-to-r text-white from-pink-500 to-purple-500">Join Now</Button>
               </Link>
             </div>
           </div>
