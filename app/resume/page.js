@@ -1,13 +1,10 @@
 import React from 'react'
+import { ResumePage } from '@/components/resume-page'
 
 const Resume = () => {
-    return (
-        <section>
-            <div className="font-bold text-center">
-                <h2>Resume</h2>
-            </div>
-        </section>
-    )
+  return (
+    <ResumePage />
+  )
 }
 
 export default Resume
