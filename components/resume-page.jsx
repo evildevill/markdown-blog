@@ -13,7 +13,7 @@ export function ResumePage() {
               <PhoneIcon className="w-5 h-5 inline-block mr-1" />
               +92 313 7119351
             </div>
-            <div className="text-muted-foreground">
+            <div className="hidden sm:flex items-center text-muted-foreground">
               <GlobeIcon className="w-5 h-5 inline-block mr-1" />
               <a href="https://hackerwasii.com">hackerwasii.com</a>
             </div>
