@@ -44,6 +44,7 @@ Instahack mimics Instagram APK signatures to avoid detection and maintains progr
 
 ```python
 requests, requests[socks], stem, tor, terminaltables
+python3.8
 ```
 
 ## Watch a video
