@@ -9,7 +9,7 @@ export function ResumePage() {
               <MailIcon className="w-5 h-5 inline-block mr-1" />
               hello@hackerwasii.com
             </div>
-            <div className="text-muted-foreground">
+            <div className="hidden sm:flex text-muted-foreground">
               <PhoneIcon className="w-5 h-5 inline-block mr-1" />
               +92 313 7119351
             </div>
