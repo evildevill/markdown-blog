@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    (<section className="w-full py-10 md:py-20 lg:py-28">
+    (<section className="container mx-auto py-10 md:py-20 lg:py-28">
       <div
         className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
         <div className="space-y-4">

@@ -163,7 +163,7 @@ export function SkillsOffered() {
   ];
 
   return (
-    <section className="py-12 md:py-16 lg:py-20">
+    <section className="container mx-auto py-12 md:py-16 lg:py-20">
       <div className="container px-4 md:px-6">
         <div className="mb-8 text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Skills & Services Offered</h2>

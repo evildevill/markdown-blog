@@ -35,7 +35,7 @@ export function NewsLetter() {
   };
 
   return (
-    <section className="w-full pt-24 md:pt-32 lg:pt-40 xl:pt-48 pb-40 sm:pb-8 md:pb-8 lg:pb-8 xl:pb-10">
+    <section className="container mx-auto pt-24 md:pt-32 lg:pt-40 xl:pt-48 pb-40 sm:pb-8 md:pb-8 lg:pb-8 xl:pb-10">
       <div className="container px-4 md:px-6">
         <div className="grid gap-6 items-center">
           <div className="flex flex-col justify-center space-y-4 text-center">
