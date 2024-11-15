@@ -7,11 +7,12 @@ import { Button } from "@/components/ui/button"
 import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import { LoginLink } from "@kinde-oss/kinde-auth-nextjs/components";
+import { SkeletonLoader } from "./SkeletonLoader"
 
 export function DashboardPageComp({ user }) {
 
   const { isAuthenticated, isLoading } = useKindeBrowserClient();
-  if (isLoading) return <div>Loading...</div>
+  if (isLoading) return <SkeletonLoader />;
 
   return isAuthenticated ? (
     (<div className="flex min-h-screen w-full flex-col bg-muted/40">

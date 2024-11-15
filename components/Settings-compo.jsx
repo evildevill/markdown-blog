@@ -10,11 +10,12 @@ import { Switch } from "@/components/ui/switch"
 import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import { LoginLink } from "@kinde-oss/kinde-auth-nextjs/components";
+import { SkeletonLoader } from "./SkeletonLoader"
 
 export function SettingsCompo({ user }) {
 
     const { isAuthenticated, isLoading } = useKindeBrowserClient();
-    if (isLoading) return <div>Loading...</div>
+    if (isLoading) return <SkeletonLoader />;
 
     return isAuthenticated ? (
         (<div className="flex min-h-screen w-full">
