@@ -1,5 +1,8 @@
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import { LoginLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { ApiKeys } from "@/components/api-keys";
 import React from "react";
+import { Button } from "@/components/ui/button";
 
 export const metadata = {
   title: "Generate API Key - Waseem Akram",
@@ -19,8 +22,28 @@ export const metadata = {
   },
 };
 
-const ApiKey = () => {
-  return <ApiKeys />;
-};
+export default async function ApiKey() {
+  const { isAuthenticated } = getKindeServerSession();
+  const { getUser } = getKindeServerSession();
+  const user = await getUser();
 
-export default ApiKey;
+  return (await isAuthenticated()) ? (
+    <ApiKeys user={user} />
+  ) : (
+    <div className="py-64 text-center">
+      <p className="text-lg py-8">
+        This Page is protected, please
+        <br />
+        <span className="ml-2">
+          <LoginLink>
+            <Button variant="outline" className="text-primary">
+              Log in
+            </Button>
+          </LoginLink>
+        </span>
+        <br />
+        to view this page.
+      </p>
+    </div>
+  );
+}
