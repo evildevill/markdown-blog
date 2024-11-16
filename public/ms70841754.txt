@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "hackerwasii.com",
+  "Id": "570cea9f-49fe-4e7d-8bd8-d275ad887f0c"
+}
