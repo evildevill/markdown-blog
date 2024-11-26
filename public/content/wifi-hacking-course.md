@@ -244,3 +244,14 @@ Once the handshake is obtained, tools like **Hashcat** can be used to crack the 
 
 - Network Scanning: You discover nearby access point and decide which one to attack.
 - Denial of Service Attack: You deauthenticate a device from the network to capture the handshake.
+- Get the Handshake: Once the device reconnects, you capture the handshake containing the encrypted password.
+- Password Cracking: Use tools like Hashcat to crack the password and gain access to the network.
+- Network Access: Once you have the password, you can connect to the network and perform further attacks.
+
+So far, the configuration and basic concepts part. You can also see more commands and content here and here
+
+### Change MAC address
+
+In this section we will see what the MAC address is, what it is used for, why to change it and what it has to do with wifi hacking.
+
+Well, the truth is that they are simple questions. The MAC address is a unique identifier that each physical device has, such as your mobile phone or your television, and as I have already said, it allows devices to be identified, so when auditing Wi-Fi networks they can see your MAC address (identifier that sends the packets) and that is why it is good practice to change it with the tool macchanger(installed by default in Kali and Parrot).
