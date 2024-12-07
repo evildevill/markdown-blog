@@ -1,5 +1,5 @@
 import AdUnit from '@/components/AdUnit'
-import { BlogPage } from '@/components/blog-page'
+import BlogPage from '@/components/blog-page';
 import React from 'react'
 
 export const metadata = {

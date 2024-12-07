@@ -1,17 +1,35 @@
-import React from 'react';
+
+"use client"
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import fs from "fs";
-import matter from 'gray-matter';
 
-const dirContent = fs.readdirSync("public/content", "utf-8");
-const blog = dirContent.map(file => {
-  const fileContent = fs.readFileSync(`public/content/${file}`, "utf-8");
-  const { data } = matter(fileContent);
-  return data;
-}).sort((a, b) => new Date(b.date) - new Date(a.date)); // Sort by date (newest first)
+const BlogPage = () => {
+  const [posts, setPosts] = useState([]);
+  const [hasMore, setHasMore] = useState(true);
+  const [page, setPage] = useState(1);
 
-export const BlogPage = () => {
+  useEffect(() => {
+    const fetchInitialPosts = async () => {
+      const res = await fetch(`/api/posts?page=1&limit=6`);
+      const { posts: initialPosts, hasMore: initialHasMore } = await res.json();
+      setPosts(initialPosts);
+      setHasMore(initialHasMore);
+    };
+
+    fetchInitialPosts();
+  }, []);
+
+  const loadMorePosts = async () => {
+    const nextPage = page + 1;
+    const res = await fetch(`/api/posts?page=${nextPage}&limit=6`);
+    const { posts: newPosts, hasMore: newHasMore } = await res.json();
+
+    setPosts([...posts, ...newPosts]);
+    setHasMore(newHasMore);
+    setPage(nextPage);
+  };
+
   return (
     <div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
       {/* Heading Section */}
@@ -22,9 +40,8 @@ export const BlogPage = () => {
 
       {/* Blog Cards Section */}
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-        {blog.map((post, index) => (
+        {posts.map((post, index) => (
           <div key={post.id || index} className="bg-white dark:bg-black rounded-lg shadow-md overflow-hidden">
-
             <Link href={`/blogposts/${post.slug}`} prefetch={false}>
               <Image
                 src={post.image}
@@ -60,6 +77,18 @@ export const BlogPage = () => {
           </div>
         ))}
       </div>
+      {hasMore && (
+        <div className="text-center mt-8">
+          <button
+            onClick={loadMorePosts}
+            className="bg-primary text-white dark:text-black px-4 py-2 rounded-md hover:bg-primary-dark transition-colors"
+          >
+            Load More
+          </button>
+        </div>
+      )}
     </div>
   );
 };
+
+export default BlogPage;
