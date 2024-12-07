@@ -49,8 +49,8 @@ const BlogPage = () => {
     <div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
       {/* Heading Section */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4 dark:text-white">Welcome to Our Blog</h1>
-        <p className="text-gray-600 dark:text-gray-300 text-lg">Explore the latest articles and insights from our team</p>
+        <h1 className="text-4xl font-bold mb-4 dark:text-white">Welcome to my Blog</h1>
+        <p className="text-gray-600 dark:text-gray-300 text-sm">Explore the latest articles and insights</p>
       </div>
 
       {/* Blog Cards Section */}
@@ -101,7 +101,7 @@ const BlogPage = () => {
             onClick={loadMorePosts}
             className="bg-primary text-white dark:text-black px-4 py-2 rounded-md hover:bg-primary-dark transition-colors"
           >
-            Load More
+            See More
           </button>
         </div>
       )}
