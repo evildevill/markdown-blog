@@ -20,7 +20,7 @@ export function TopBlog() {
     <div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-4 dark:text-white">Top Stories</h1>
-        <p className="text-gray-600 dark:text-gray-300 text-lg">Read our weekly top blog posts</p>
+        <p className="text-gray-600 dark:text-gray-300 text-lg">Read my weekly top blog posts</p>
       </div>
 
       {/* Blog Cards Section */}
