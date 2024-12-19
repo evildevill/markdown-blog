@@ -101,8 +101,8 @@ export function ContactMe() {
       {/* Lottie Animation */}
         <div className="h-[400px] md:h-auto pl-28 md:block hidden">
           <Lottie
-            animationData={contactAnimation} // Correctly reference your JSON file
-            loop={true} // Proper loop prop usage
+            animationData={contactAnimation}
+            loop={true}
             className="w-full h-full"
             style={{ maxWidth: '400px' }}
             preload="auto"
