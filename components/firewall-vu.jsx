@@ -97,7 +97,7 @@ export function FirewallVu() {
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Frequently Asked Questions</div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Got Questions? We&apos;ve Got Answers.</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-sm xl:text-sm/relaxed">
-                  Explore our FAQ section to find answers to the most common questions about our Chrome extension.
+                  Explore our FAQ section to find answers to the most common questions about our Firewall Bypass VU extension.
                 </p>
               </div>
             </div>
@@ -105,47 +105,41 @@ export function FirewallVu() {
               <Accordion type="single" collapsible className="space-y-2">
                 <AccordionItem value="item-1">
                   <AccordionTrigger className="flex w-full items-center justify-between rounded-lg bg-muted px-4 py-3 text-left">
-                    <h3 className="text-lg font-bold">How do I install the Chrome extension?</h3>
+                    <h3 className="text-lg font-bold">How do I install Firewall Bypass VU?</h3>
                   </AccordionTrigger>
                   <AccordionContent className="px-4 py-3 text-muted-foreground">
                     <p>
-                      Installing the Chrome extension is easy! Simply visit our website, click the &quot;Get the Extension&quot;
-                      button, and follow the prompts to add it to your Chrome browser.
+                      Simply visit our website, click the &quot;Get the Extension&quot; button, and follow the instructions to add the extension to your Chrome browser.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-2">
                   <AccordionTrigger className="flex w-full items-center justify-between rounded-lg bg-muted px-4 py-3 text-left">
-                    <h3 className="text-lg font-bold">What features does the extension offer?</h3>
+                    <h3 className="text-lg font-bold">What features does Firewall Bypass VU offer?</h3>
                   </AccordionTrigger>
                   <AccordionContent className="px-4 py-3 text-muted-foreground">
                     <p>
-                      Our Chrome extension offers a wide range of features, including a bookmark manager, clipboard
-                      history, page customization tools, and more. You can explore the &quot;Features&quot; section on our website
-                      to learn more.
+                      Our extension helps you skip lectures, copy quiz content, and enable easy GDB copy-paste, allowing you to streamline your Virtual University tasks.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-3">
                   <AccordionTrigger className="flex w-full items-center justify-between rounded-lg bg-muted px-4 py-3 text-left">
-                    <h3 className="text-lg font-bold">Is the extension free to use?</h3>
+                    <h3 className="text-lg font-bold">Is Firewall Bypass VU free to use?</h3>
                   </AccordionTrigger>
                   <AccordionContent className="px-4 py-3 text-muted-foreground">
                     <p>
-                      Yes, our Chrome extension is completely free to use. There are no subscription fees or hidden
-                      costs. You can enjoy all the features and benefits without any financial commitment.
+                      Yes, the Firewall Bypass VU extension is completely free. Enjoy all features without any hidden costs or subscriptions.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-4">
                   <AccordionTrigger className="flex w-full items-center justify-between rounded-lg bg-muted px-4 py-3 text-left">
-                    <h3 className="text-lg font-bold">Is the extension secure and privacy-focused?</h3>
+                    <h3 className="text-lg font-bold">Is the extension secure and private?</h3>
                   </AccordionTrigger>
                   <AccordionContent className="px-4 py-3 text-muted-foreground">
                     <p>
-                      Absolutely! We take security and privacy very seriously. Our Chrome extension is designed with
-                      robust security measures and strict data protection policies to ensure your information remains
-                      safe and confidential.
+                      Absolutely! We prioritize your privacy and security. Our extension uses strong encryption and follows strict data protection guidelines to keep your information safe.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -153,25 +147,21 @@ export function FirewallVu() {
               <Accordion type="single" collapsible className="space-y-2">
                 <AccordionItem value="item-5">
                   <AccordionTrigger className="flex w-full items-center justify-between rounded-lg bg-muted px-4 py-3 text-left">
-                    <h3 className="text-lg font-bold">Can I customize the extension&apos;s appearance?</h3>
+                    <h3 className="text-lg font-bold">Can I customize the extension?</h3>
                   </AccordionTrigger>
                   <AccordionContent className="px-4 py-3 text-muted-foreground">
                     <p>
-                      Yes, our Chrome extension offers a range of customization options. You can adjust the color
-                      scheme, font styles, and various UI elements to personalize the extension&apos;s appearance to your
-                      liking.
+                      Yes, you can customize the extension&apos;s appearance, including theme colors and UI elements, to suit your preferences.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-6">
                   <AccordionTrigger className="flex w-full items-center justify-between rounded-lg bg-muted px-4 py-3 text-left">
-                    <h3 className="text-lg font-bold">How do I get support for the extension?</h3>
+                    <h3 className="text-lg font-bold">How can I get support for the extension?</h3>
                   </AccordionTrigger>
                   <AccordionContent className="px-4 py-3 text-muted-foreground">
                     <p>
-                      If you encounter any issues or have questions about the extension, you can reach out to our
-                      dedicated support team. We offer multiple channels for assistance, including email, live chat, and
-                      an extensive knowledge base.
+                      You can contact our support team via email or live chat. We also offer a comprehensive knowledge base for quick solutions.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -181,9 +171,7 @@ export function FirewallVu() {
                   </AccordionTrigger>
                   <AccordionContent className="px-4 py-3 text-muted-foreground">
                     <p>
-                      Currently, our Chrome extension is only available for Google Chrome. However, we are actively
-                      working on developing versions for other popular browsers, such as Firefox and Edge. Stay tuned
-                      for updates on our cross-browser compatibility.
+                      Currently, the extension is available only for Google Chrome. We&apos;re working on versions for other browsers like Firefox and Edge, so stay tuned for updates.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -210,46 +198,6 @@ function BookmarkIcon(props) {
       strokeLinecap="round"
       strokeLinejoin="round">
       <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
-    </svg>
-  );
-}
-
-function ChevronDownIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round">
-      <path d="m6 9 6 6 6-6" />
-    </svg>
-  );
-}
-
-function ChromeIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round">
-      <circle cx="12" cy="12" r="10" />
-      <circle cx="12" cy="12" r="4" />
-      <line x1="21.17" x2="12" y1="8" y2="8" />
-      <line x1="3.95" x2="8.54" y1="6.06" y2="14" />
-      <line x1="10.88" x2="15.46" y1="21.94" y2="14" />
     </svg>
   );
 }
