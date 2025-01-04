@@ -14,7 +14,7 @@ export function FirewallVu() {
                   <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-5xl/none">
                     Firewall Bypass VU Freedom for VU Students
                   </h1>
-                  <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                  <p className="max-w-[600px] text-muted-foreground md:text-1xl">
                     Firewall Bypass VU is the ultimate browser extension for Virtual University students. Effortlessly bypass lecture restrictions, copy quizzes, and enable easy copy-paste for GDBs—all in one tool. Simplify your academic tasks and enjoy unrestricted access to your learning resources. Enhance your VU experience with Firewall Bypass VU today!
                   </p>
                 </div>
