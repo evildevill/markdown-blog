@@ -38,6 +38,14 @@ const reviews = [
     review: "Amazing Thanks for for being helpful in our studies and making it easy for us may Allah bless you"
   },
   {
+    name: "Abdul Tahir",
+    avatar: "/placeholder-user.jpg",
+    alt: "@abdul",
+    fallback: "AT",
+    rating: 5,
+    review: "it worked. this extension exactly does what it promises highly recommended to all students. just close your eyes and trust it."
+  },
+  {
     name: "NIMRA SADIQUE",
     avatar: "/placeholder-user.jpg",
     alt: "@nimra",
@@ -157,15 +165,15 @@ export function FirewallVu() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Students Reviews</div>
-                <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl">What Vu Students Say About Extension</h2>
+                <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl">What Vu Students Say</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-sm xl:text-sm/relaxed">
                   Discover what students have to say about their experience with Firewall Bypass VU. Read their reviews to learn more about the benefits of our extension.
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
               {reviews.map((review, index) => (
-                <Card key={index} className="flex flex-col gap-4 p-4 sm:p-6">
+                <Card key={index} className="flex flex-col gap-4 p-4 sm:p-6 h-44">
                   <div className="flex items-center gap-4">
                     <Avatar className="w-10 h-10 border">
                       <AvatarImage src={review.avatar} alt={review.alt} />
@@ -183,7 +191,7 @@ export function FirewallVu() {
                       </div>
                     </div>
                   </div>
-                  <div className="text-sm leading-relaxed text-muted-foreground">
+                  <div className="text-sm leading-relaxed text-muted-foreground flex-grow">
                     {review.review}
                   </div>
                 </Card>
@@ -221,9 +229,9 @@ export function FirewallVu() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Frequently Asked Questions</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Got Questions? We&apos;ve Got Answers.</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Got Questions? I&apos;ve Got Answers.</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-sm xl:text-sm/relaxed">
-                  Explore our FAQ section to find answers to the most common questions about our Firewall Bypass VU extension.
+                  Explore FAQ section to find answers to the most common questions about my Firewall Bypass VU extension.
                 </p>
               </div>
             </div>
@@ -259,6 +267,8 @@ export function FirewallVu() {
                     </p>
                   </AccordionContent>
                 </AccordionItem>
+              </Accordion>
+              <Accordion type="single" collapsible className="space-y-2">
                 <AccordionItem value="item-4">
                   <AccordionTrigger className="flex w-full items-center justify-between rounded-lg bg-muted px-4 py-3 text-left">
                     <h3 className="text-lg font-bold">Is the extension secure and private?</h3>
@@ -266,18 +276,6 @@ export function FirewallVu() {
                   <AccordionContent className="px-4 py-3 text-muted-foreground">
                     <p>
                       Absolutely! We prioritize your privacy and security. Our extension uses strong encryption and follows strict data protection guidelines to keep your information safe.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-              <Accordion type="single" collapsible className="space-y-2">
-                <AccordionItem value="item-5">
-                  <AccordionTrigger className="flex w-full items-center justify-between rounded-lg bg-muted px-4 py-3 text-left">
-                    <h3 className="text-lg font-bold">Can I customize the extension?</h3>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-4 py-3 text-muted-foreground">
-                    <p>
-                      Yes, you can customize the extension&apos;s appearance, including theme colors and UI elements, to suit your preferences.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
