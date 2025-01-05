@@ -180,6 +180,31 @@ export function FirewallVu() {
             </div>
           </div>
         </section>
+        {/* how to use this extension video section */}
+        <section id="how-to-use" className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">How to Use Firewall Bypass VU</h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-sm xl:text-sm/relaxed">
+                  Learn how to use Firewall Bypass VU to unlock lecture access, copy quizzes, and manage GDBs with ease. Watch the video tutorial to get started.
+                </p>
+              </div>
+              <div className="relative w-full max-w-3xl h-0 pb-[56.25%] mx-auto">
+                <video
+                  src="/video.mp4"
+                  title="Video player"
+                  className="absolute inset-0"
+                  controls
+                  controlsList="nodownload"
+                  autoPlay
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="reviews" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
