@@ -1,6 +1,67 @@
 import Link from "next/link"
 import Image from "next/image";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
+import { Card } from "@/components/ui/card"
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
+
+const reviews = [
+  {
+    name: "Maham Zaman",
+    avatar: "/placeholder-user.jpg",
+    alt: "@shadcn",
+    fallback: "MZ",
+    rating: 5,
+    review: "thanks i give thousands of star of this extension its help a lot"
+  },
+  {
+    name: "Junaid Ali",
+    avatar: "/placeholder-user.jpg",
+    alt: "@juniadali",
+    fallback: "JA",
+    rating: 5,
+    review: "I was use another extension but now it is paid when i use this extension it's really nice and good working thank a lot may allah give you more success and healthy.."
+  },
+  {
+    name: "Muhammad Muneeb",
+    avatar: "/placeholder-user.jpg",
+    alt: "@muneeb",
+    fallback: "MB",
+    rating: 5,
+    review: "So nice ....so Helpfull....i really thanks to its creator"
+  },
+  {
+    name: "Memona Zainab Alvi",
+    avatar: "/placeholder-user.jpg",
+    alt: "@memona",
+    fallback: "MZ",
+    rating: 5,
+    review: "Amazing Thanks for for being helpful in our studies and making it easy for us may Allah bless you"
+  },
+  {
+    name: "NIMRA SADIQUE",
+    avatar: "/placeholder-user.jpg",
+    alt: "@nimra",
+    fallback: "NS",
+    rating: 4,
+    review: "good but no one and nothing is perfect so i give 7/10"
+  },
+  {
+    name: "Rikza Naseeb Warraich",
+    avatar: "/placeholder-user.jpg",
+    alt: "@rikza",
+    fallback: "RN",
+    rating: 5,
+    review: "It is a perfect extension for us for attempt a quiz. kindly don't update it in a paid version. Thanks"
+  },
+  {
+    name: "Ghazal Khan",
+    avatar: "/placeholder-user.jpg",
+    alt: "@ghazal",
+    fallback: "GK",
+    rating: 5,
+    review: "Smoothly working. You helped a lot of students by developing this extension. Keep it up.. Great work ngl"
+  }
+];
 
 export function FirewallVu() {
   return (
@@ -46,7 +107,7 @@ export function FirewallVu() {
                   Key Features of Firewall Bypass VU
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-1xl/relaxed">
-                    Effortlessly bypass lecture restrictions, copy quizzes, and manage GDBs with ease. Firewall Bypass VU streamlines your Virtual University tasks, saving you time and enhancing your productivity.
+                  Effortlessly bypass lecture restrictions, copy quizzes, and manage GDBs with ease. Firewall Bypass VU streamlines your Virtual University tasks, saving you time and enhancing your productivity.
                 </p>
               </div>
             </div>
@@ -91,6 +152,70 @@ export function FirewallVu() {
             </div>
           </div>
         </section>
+        <section id="reviews" className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Students Reviews</div>
+                <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl">What Vu Students Say About Extension</h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-sm xl:text-sm/relaxed">
+                  Discover what students have to say about their experience with Firewall Bypass VU. Read their reviews to learn more about the benefits of our extension.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+              {reviews.map((review, index) => (
+                <Card key={index} className="flex flex-col gap-4 p-4 sm:p-6">
+                  <div className="flex items-center gap-4">
+                    <Avatar className="w-10 h-10 border">
+                      <AvatarImage src={review.avatar} alt={review.alt} />
+                      <AvatarFallback>{review.fallback}</AvatarFallback>
+                    </Avatar>
+                    <div className="grid gap-1">
+                      <div className="font-semibold">{review.name}</div>
+                      <div className="flex items-center gap-1 text-xs">
+                        {[...Array(5)].map((_, i) => (
+                          <StarIcon
+                            key={i}
+                            className={`w-4 h-4 ${i < review.rating ? 'fill-primary' : 'fill-muted stroke-muted-foreground'}`}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="text-sm leading-relaxed text-muted-foreground">
+                    {review.review}
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* cta */}
+        <section id="cta" className="w-full py-12 md:py-24 lg:py-32 bg-primary">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary-foreground">
+                  Ready to Streamline Your VU Experience?
+                </h2>
+                <p className="max-w-[900px] text-primary-foreground md:text-xl/relaxed lg:text-sm xl:text-sm/relaxed">
+                  Get started with Firewall Bypass VU today and enjoy unrestricted access to your Virtual University resources. Simplify your academic tasks and enhance your productivity with our powerful extension.
+                </p>
+              </div>
+              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <Link
+                  href="https://dub.sh/vufirewall"
+                  target="_blank"
+                  className="inline-flex h-10 items-center justify-center rounded-md bg-primary-foreground px-8 text-sm font-medium text-primary shadow transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                  prefetch={false}>
+                  Download Now
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="faq" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -180,6 +305,28 @@ export function FirewallVu() {
             </div>
           </div>
         </section>
+
+        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Contact Us</h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-sm xl:text-sm/relaxed">
+                  Have a question or need assistance with our Firewall Bypass VU extension? Contact our support team for help and guidance.
+                </p>
+              </div>
+              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <Link
+                  href="mailto:hello@hackerwasii.com"
+                  className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                  prefetch={false}>
+                  Contact Support
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </main>
     </div>
   );
@@ -220,6 +367,25 @@ function ClipboardIcon(props) {
       <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
     </svg>
   );
+}
+
+function StarIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+    </svg>
+  )
 }
 
 function WandIcon(props) {
