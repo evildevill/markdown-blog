@@ -79,8 +79,8 @@ export function FirewallVu() {
 
   useEffect(() => {
     let start = 0;
-    const end = 7000;
-    const duration = 1; // 3 seconds
+    const end = 7778;
+    const duration = 1;
     const incrementTime = (duration / end) * 10000;
 
     const timer = setInterval(() => {
@@ -118,11 +118,11 @@ export function FirewallVu() {
                 </div>
               </div>
               <Image
-                src="/placeholder.svg"
+                src="/images/firewall-bypass-vu.webp"
                 width="550"
                 height="550"
                 alt="Hero"
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square" />
+                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-video" />
             </div>
           </div>
         </section>
@@ -172,7 +172,7 @@ export function FirewallVu() {
                 </ul>
               </div>
               <Image
-                src="/placeholder.svg"
+                src="/images/firewall-bypass-vu.webp"
                 width="550"
                 height="310"
                 alt="Features"
