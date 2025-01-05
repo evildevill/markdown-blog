@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link"
 import Image from "next/image";
+import { useEffect, useState } from 'react';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
 import { Card } from "@/components/ui/card"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
@@ -72,6 +74,24 @@ const reviews = [
 ];
 
 export function FirewallVu() {
+
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+    const end = 7000;
+    const duration = 1; // 3 seconds
+    const incrementTime = (duration / end) * 10000;
+
+    const timer = setInterval(() => {
+      start += 1;
+      setCount(start);
+      if (start === end) clearInterval(timer);
+    }, incrementTime);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="container mx-auto flex-col min-h-[100dvh] items-center">
       <main className="flex-1 w-full">
@@ -224,6 +244,25 @@ export function FirewallVu() {
           </div>
         </section>
 
+        {/* number of users  */}
+        <section id="users" className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Join Thousands of Happy Users</h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-sm xl:text-sm/relaxed">
+                  Firewall Bypass VU has helped thousands of Virtual University students streamline their academic tasks. Join our community of happy users and enjoy the benefits of our powerful extension.
+                </p>
+              </div>
+              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <div className="flex items-center justify-center gap-4">
+                  <div className="text-4xl font-bold">{count.toLocaleString()}+</div>
+                  <div className="text-lg font-semibold text-muted-foreground">Happy Users</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section id="faq" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
