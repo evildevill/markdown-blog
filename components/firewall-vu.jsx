@@ -113,7 +113,7 @@ export function FirewallVu() {
                     target="_blank"
                     className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                     prefetch={false}>
-                    Get the Extension
+                    Download Now
                   </Link>
                 </div>
               </div>
@@ -187,7 +187,7 @@ export function FirewallVu() {
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Students Reviews</div>
                 <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl">What Vu Students Say</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-sm xl:text-sm/relaxed">
-                  Discover what students have to say about their experience with Firewall Bypass VU. Read their reviews to learn more about the benefits of our extension.
+                  Discover what students have to say about their experience with Firewall Bypass VU. Read their reviews to learn more about the benefits of my extension.
                 </p>
               </div>
             </div>
@@ -228,7 +228,7 @@ export function FirewallVu() {
                   Ready to Streamline Your VU Experience?
                 </h2>
                 <p className="max-w-[900px] text-primary-foreground md:text-xl/relaxed lg:text-sm xl:text-sm/relaxed">
-                  Get started with Firewall Bypass VU today and enjoy unrestricted access to your Virtual University resources. Simplify your academic tasks and enhance your productivity with our powerful extension.
+                  Get started with Firewall Bypass VU today and enjoy unrestricted access to your Virtual University resources. Simplify your academic tasks and enhance your productivity with my powerful extension.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -245,13 +245,13 @@ export function FirewallVu() {
         </section>
 
         {/* number of users  */}
-        <section id="users" className="w-full py-12 md:py-24 lg:py-32">
+        <section id="users" className="w-full py-24 md:py-24 lg:pt-32 lg:pb-12">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Join Thousands of Happy Users</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-sm xl:text-sm/relaxed">
-                  Firewall Bypass VU has helped thousands of Virtual University students streamline their academic tasks. Join our community of happy users and enjoy the benefits of our powerful extension.
+                  Firewall Bypass VU has helped thousands of Virtual University students streamline their academic tasks. Join my community of happy users and enjoy the benefits of my powerful extension.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -349,7 +349,7 @@ export function FirewallVu() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Contact Us</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-sm xl:text-sm/relaxed">
-                  Have a question or need assistance with our Firewall Bypass VU extension? Contact our support team for help and guidance.
+                  Have a question or need assistance with my Firewall Bypass VU extension? Contact me for help and guidance.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
