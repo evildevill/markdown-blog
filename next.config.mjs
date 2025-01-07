@@ -12,6 +12,12 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/hostinger",
+        destination:
+          "https://hostinger.pk?REFERRALCODE=HACKERNOON&utm_source=affiliate&utm_medium=affiliate&utm_campaign=affiliate",
+        permanent: true,
+      },
+      {
         source: "/posts/malware-development-how-to-call-windows-api-from-go",
         destination:
           "/blogposts/malware-development-how-to-call-windows-api-from-go",
