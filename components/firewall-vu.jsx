@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
 import { Card } from "@/components/ui/card"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
+import { NewsLetter } from "./news-letter";
 
 const reviews = [
   {
@@ -100,7 +101,7 @@ export function FirewallVu() {
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-5xl/none">
+                  <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-5xl/none bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                     Firewall Bypass VU Freedom for VU Students
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-1xl">
@@ -131,7 +132,7 @@ export function FirewallVu() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Key Features</div>
-                <h2 className="text-xl font-bold tracking-tighter sm:text-5xl">
+                <h2 className="text-xl font-bold tracking-tighter sm:text-5xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                   Key Features of Firewall Bypass VU
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-1xl/relaxed">
@@ -185,12 +186,12 @@ export function FirewallVu() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">How to Use Firewall Bypass VU</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">How to Use Firewall Bypass VU</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-sm xl:text-sm/relaxed">
                   Learn how to use Firewall Bypass VU to unlock lecture access, copy quizzes, and manage GDBs with ease. Watch the video tutorial to get started.
                 </p>
               </div>
-              <div className="relative w-full max-w-3xl h-0 pb-[56.25%] mx-auto">
+              <div className="relative w-full max-w-3xl h-0 pb-[36.25%] mx-auto">
                 <video
                   src="/video.mp4"
                   title="Video player"
@@ -205,12 +206,14 @@ export function FirewallVu() {
           </div>
         </section>
 
+        <NewsLetter />
+
         <section id="reviews" className="w-full py-12 md:py-24 lg:pt-1 lg:pb-32">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Students Reviews</div>
-                <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl">What Vu Students Say</h2>
+                <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">What Vu Students Say</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-sm xl:text-sm/relaxed">
                   Discover what students have to say about their experience with Firewall Bypass VU. Read their reviews to learn more about the benefits of my extension.
                 </p>
@@ -225,7 +228,7 @@ export function FirewallVu() {
                       <AvatarFallback>{review.fallback}</AvatarFallback>
                     </Avatar>
                     <div className="grid gap-1">
-                      <div className="font-semibold">{review.name}</div>
+                      <div className="font-semibold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">{review.name}</div>
                       <div className="flex items-center gap-1 text-xs">
                         {[...Array(5)].map((_, i) => (
                           <StarIcon
@@ -249,7 +252,7 @@ export function FirewallVu() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary-foreground">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                   Ready to Streamline Your VU Experience?
                 </h2>
                 <p className="max-w-[900px] text-primary-foreground md:text-xl/relaxed lg:text-sm xl:text-sm/relaxed">
@@ -274,7 +277,7 @@ export function FirewallVu() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Join Thousands of Happy Users</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">Join Thousands of Happy Users</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-sm xl:text-sm/relaxed">
                   Firewall Bypass VU has helped thousands of Virtual University students streamline their academic tasks. Join my community of happy users and enjoy the benefits of my powerful extension.
                 </p>
@@ -282,7 +285,7 @@ export function FirewallVu() {
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <div className="flex items-center justify-center gap-4">
                   <div className="text-4xl font-bold">{count.toLocaleString()}+</div>
-                  <div className="text-lg font-semibold text-muted-foreground">Happy Users</div>
+                  <div className="text-lg font-semibold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">Happy Users</div>
                 </div>
               </div>
             </div>
@@ -293,7 +296,7 @@ export function FirewallVu() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Frequently Asked Questions</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Got Questions? I&apos;ve Got Answers.</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">Got Questions? I&apos;ve Got Answers.</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-sm xl:text-sm/relaxed">
                   Explore FAQ section to find answers to the most common questions about my Firewall Bypass VU extension.
                 </p>
@@ -372,7 +375,7 @@ export function FirewallVu() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Contact Us</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">Contact Us</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-sm xl:text-sm/relaxed">
                   Have a question or need assistance with my Firewall Bypass VU extension? Contact me for help and guidance.
                 </p>
