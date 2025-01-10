@@ -18,17 +18,19 @@ const OnThisPage = ({ htmlContent }) => {
   });
 
   return (
-    <div>
+    <div className="border p-4 rounded-md shadow-md">
       <h2 className="text-lg font-semibold mb-4">On This Page</h2>
-      <ul>
-        {headingList.map(({ id, text, level }) => (
-          <li key={id} className={`pl-${level === 'h2' ? 2 : level === 'h3' ? 4 : 0} py-1`}>
-            <a href={`#${id}`} className="text-gray-600 dark:text-white hover:underline">
-              {text}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <div className="max-h-80 overflow-y-auto">
+        <ul>
+          {headingList.map(({ id, text, level }) => (
+            <li key={id} className={`pl-${level === 'h2' ? 2 : level === 'h3' ? 4 : 0} py-1`}>
+              <a href={`#${id}`} className="text-gray-600 dark:text-white hover:underline">
+                {text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
