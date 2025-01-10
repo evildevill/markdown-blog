@@ -15,8 +15,6 @@ Instahack is a **Bash** and **Python-based** tool made to **test password streng
 
 This tool is compatible with both rooted and non-rooted Android devices and can help users test their account security. **Instahack** was created by *Waseem Akram* and focuses on password testing for educational and ethical purposes. The tool is built using Bash and Python scripts.
 
-![instahack](/images/posts/instahack/instahack.webp "instahack")
-
 ## How Does Instahack Work?
 
 Instahack leverages Tor to change IP addresses, bypassing Instagram’s login limits to test large wordlists against a user’s password. The goal of this tool is to demonstrate how a brute force attack can expose vulnerabilities in weak passwords, so users can better protect themselves.
