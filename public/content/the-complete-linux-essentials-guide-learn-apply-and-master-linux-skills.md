@@ -1,88 +1,64 @@
 ---
-title: "Mastering Linux Essentials: A Comprehensive Guide for Beginners and Professionals"
-description: "Discover everything you need to know about Linux essentials in this in-depth guide. From package management and command-line basics to scripting, file permissions"
-slug: "mastering-linux-essentials-a-comprehensive-guide-for-beginners-and-professionals"
-date: "2025-01-08"
+title: "The Complete Linux Essentials Guide: Learn, Apply, and Master Linux Skills"
+description: "Dive into the world of Linux with this complete guide covering everything from package management to scripting and networking. Perfect for those starting their Linux journey.."
+slug: "the-complete-linux-essentials-guide-learn-apply-and-master-linux-skills"
+date: "2025-01-10"
 author: "Waseem Akram"
-image: "/images/posts/maldev/3/thumb-maldev-3.webp"
+image: "/images/posts/linux-essentials/linux-essentials.webp"
 ---
 
-# Linux essentials
 
-## <span id="index"></span>Index
-* [Package management](#package)
-    + [RPM based](#rpm)
-    + [Debian based: APT and dpkg](#debian)
-* [Command-line basics](#cli-basics)
-    + [Command-line syntax](#cli-syntax)
-    + [Basic commands](#basic-commands)
-    + [Command history and completion](#cmd-history)
-    + [shell configuration files](#shell-config-files)
-    + [Environment / shell variables](#variables)
-    + [User-defined variables](#user-def-vars)
-    + [Globbing](#globbing)
-    + [Quoting](#quoting)
-    + [Formatting commands](#formatting)
-    + [Working with options](#options)
-    + [Locate, find, whereis](#locate-find-whereis)
-* [Getting CLI help](#cli-help)
-    + [Linux MAN pages](#man-pages)
-    + [Info pages](#info-pages)
-    + [More local documentation](#more-local-docs)
-
-## <span id="package"></span>Package management
-
-### <span id="rpm"></span>RPM based
+## Package management
 
 #### Yum
 YUM repos are located in `/etc/yum.repos.d/`. Unlike APT, YUM has several repo files in the folder. Check out the man pages for YUM and the other package management commands.
 
-| command | purpose |
-| --- | --- |
-| `yum update` | updates the repos and gives you the option of updating the packages pending updates |
-| `yum search httpd` | searches for that package |
-| `yum install $package` | to install it |
-| `yum check-update $package` | to see if a package needs any updates |
-| `yum upgrade` | upgrade package |
-| `yum deplist $package` | check package’s list of dependencies |
-| `yum clean packages` | will remove dependencies that were left behind but are no longer needed |
-| `yum remove $package` | removes the package |
-| `yum list installed` | list all installed packages |
+| command                     | purpose                                                                             |
+| --------------------------- | ----------------------------------------------------------------------------------- |
+| `yum update`                | updates the repos and gives you the option of updating the packages pending updates |
+| `yum search httpd`          | searches for that package                                                           |
+| `yum install $package`      | to install it                                                                       |
+| `yum check-update $package` | to see if a package needs any updates                                               |
+| `yum upgrade`               | upgrade package                                                                     |
+| `yum deplist $package`      | check package’s list of dependencies                                                |
+| `yum clean packages`        | will remove dependencies that were left behind but are no longer needed             |
+| `yum remove $package`       | removes the package                                                                 |
+| `yum list installed`        | list all installed packages                                                         |
 
 #### RPM
-| command | purpose |
-| --- | --- |
+| command                | purpose                                                           |
+| ---------------------- | ----------------------------------------------------------------- |
 | `rpm -ipv package.rpm` | `i` means install, `p` means show progress, and `v` means verbose |
-| `rpm -q nano` | query the package for info (true file name) |
-| `rpm -qi nano` | query the package for more info |
-| `rpm -e nano` | uninstall the package |
-| `rpm -qR nano` | uninstall required packages |
+| `rpm -q nano`          | query the package for info (true file name)                       |
+| `rpm -qi nano`         | query the package for more info                                   |
+| `rpm -e nano`          | uninstall the package                                             |
+| `rpm -qR nano`         | uninstall required packages                                       |
 
 ### <span id="debian"></span>Debian based: APT and dpkg
 
 #### APT
 Uses a sources list located in `etc/apt/sources.list`
 
-| command | purpose |
-| --- | --- |
-| `apt-get update` | searches the online repos and caches the list of packages for when we do a search via... |
-| `apt-cache search $package` | searches for a package in the APT cache |
-| `apt-get install nginx` | install package |
-| `apt-get remove nginx` | remove package |
-| `apt-get remove --purge nginx` | to get rid of config files and such |
-| `apt-get autoremove [$package]` | to remove unneeded packages. |
-| `apt-get upgrade` | upgrades packages |
-| `apt-get -f upgrade` | Imstalls dependencies that we’re flagged while attempting to install a Debian package |
-| `apt-get dist-upgrade` | upgrades the kernel and distribution packages |
+| command                         | purpose                                                                                  |
+| ------------------------------- | ---------------------------------------------------------------------------------------- |
+| `apt-get update`                | searches the online repos and caches the list of packages for when we do a search via... |
+| `apt-cache search $package`     | searches for a package in the APT cache                                                  |
+| `apt-get install nginx`         | install package                                                                          |
+| `apt-get remove nginx`          | remove package                                                                           |
+| `apt-get remove --purge nginx`  | to get rid of config files and such                                                      |
+| `apt-get autoremove [$package]` | to remove unneeded packages.                                                             |
+| `apt-get upgrade`               | upgrades packages                                                                        |
+| `apt-get -f upgrade`            | Imstalls dependencies that we’re flagged while attempting to install a Debian package    |
+| `apt-get dist-upgrade`          | upgrades the kernel and distribution packages                                            |
 
 #### dpkg
 
-| command | purpose |
-| --- | --- |
-| `dpkg -i name.deb` | Installs Debian package |
-| `dpkg --get-selections` | shows all installed packages |
-| `dpkg --remove $package_name` | Removes Debian package |
-| `dpkg --purge $package_name` | Removes dependencies |
+| command                       | purpose                      |
+| ----------------------------- | ---------------------------- |
+| `dpkg -i name.deb`            | Installs Debian package      |
+| `dpkg --get-selections`       | shows all installed packages |
+| `dpkg --remove $package_name` | Removes Debian package       |
+| `dpkg --purge $package_name`  | Removes dependencies         |
 
 
 ## <span id="cli-basics"></span>Command-line basics
@@ -119,21 +95,21 @@ an @ after each symbolic link.
 
 ### <span id="basic-commands"></span>Basic commands
 
-| Command | Purpose |
-| :--- | :--- |
-| `cd` | change directory. By itself, takes you to your home directory. |
-| `env` | display current user’s environment variables |
-| `halt` or `init 0` | shutdown. Note that `init` works but is deprecated |
-| `ifconfig` or `ip addr` | shows NIC configs |
-| `netstat` | status of the network |
-| `reboot` or `init 1` | restart. Note that `init` works but is deprecated |
-| `route` | view routing table |
-| `shutdown` | `-H`= halt; `-P`= poweroff; `c` = cancel pending shutdown; `r` = reboot |
-| `su` | substitute user or super user. E.g., `su josue` or `su -` to become root |
-| `top` | list of running apps/processes; `top -h` gives usage info |
-| `uname` | print OS name. `-n` = hostname; `-r` = kernel’s release; `-v` = kernel’s version number; `-m` 32- or 64-bit; `-p` = processor info; `-o` = full official name of the OS; `-a` = all info above |
-| `which $program` | full path of the application |
-| `whoami` | current user |
+| Command                 | Purpose                                                                                                                                                                                        |
+| :---------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `cd`                    | change directory. By itself, takes you to your home directory.                                                                                                                                 |
+| `env`                   | display current user’s environment variables                                                                                                                                                   |
+| `halt` or `init 0`      | shutdown. Note that `init` works but is deprecated                                                                                                                                             |
+| `ifconfig` or `ip addr` | shows NIC configs                                                                                                                                                                              |
+| `netstat`               | status of the network                                                                                                                                                                          |
+| `reboot` or `init 1`    | restart. Note that `init` works but is deprecated                                                                                                                                              |
+| `route`                 | view routing table                                                                                                                                                                             |
+| `shutdown`              | `-H`= halt; `-P`= poweroff; `c` = cancel pending shutdown; `r` = reboot                                                                                                                        |
+| `su`                    | substitute user or super user. E.g., `su josue` or `su -` to become root                                                                                                                       |
+| `top`                   | list of running apps/processes; `top -h` gives usage info                                                                                                                                      |
+| `uname`                 | print OS name. `-n` = hostname; `-r` = kernel’s release; `-v` = kernel’s version number; `-m` 32- or 64-bit; `-p` = processor info; `-o` = full official name of the OS; `-a` = all info above |
+| `which $program`        | full path of the application                                                                                                                                                                   |
+| `whoami`                | current user                                                                                                                                                                                   |
 
 ### <span id="cmd-history"></span>Command history and completion
 - A user's command history is kept in **~/.bash_history**
@@ -172,18 +148,18 @@ Different shell use different configuration files. Make sure you know which file
 
 #### Common environment variables
 
-| variable | description |
-| --- | --- |
-| LOGNAME | username of current user |
-| OLDPWD | previous working directory |
-| OSTYPE | duh |
-| PATH | distro dependent |
-| USER and USERNAME | username of current user |
-| HOST and HOSTNAME | system hostname |
-| ENV | you can type `env` or `set` |
-| EUID | UID number of current user |
-| HISTFILE | full path of file  |
-| HISTSIZE | size history can grow to |
+| variable          | description                 |
+| ----------------- | --------------------------- |
+| LOGNAME           | username of current user    |
+| OLDPWD            | previous working directory  |
+| OSTYPE            | duh                         |
+| PATH              | distro dependent            |
+| USER and USERNAME | username of current user    |
+| HOST and HOSTNAME | system hostname             |
+| ENV               | you can type `env` or `set` |
+| EUID              | UID number of current user  |
+| HISTFILE          | full path of file           |
+| HISTSIZE          | size history can grow to    |
 
 ### <span id="user-def-vars"></span>User-defined variables
 - Variables cannot start with a number. They can contain `-` amd `_`
@@ -206,7 +182,7 @@ Globbing is the process of using wildcards to expand a search. Globbing stands f
 ### <span id="quoting"></span>Quoting
 
 | Character | Description                               | Example                    |
-| :---      | :---                                      | :---                       |
+| :-------- | :---------------------------------------- | :------------------------- |
 | `"`       | allows variable interpolation.            | `echo "The path is $PATH"` |
 | `'`       | __does not__ allow variable interpolation | `echo 'The path is $PATH'` |
 | `\`       | Escapes special chars                     | `echo "You owe \$5.00"`    |
@@ -288,14 +264,14 @@ Searches for executables and man page files
 #### Reading different file formats
 
 | file ext                | program used to read them                          |
-| :---                    | :---                                               |
+| :---------------------- | :------------------------------------------------- |
 | `.1` - `.9`             | man, info, less                                    |
 | `.gz` or `.bz2`         | gunzip or bunzip2 to decompress, then less to read |
 | `.txt`                  | any text editor                                    |
 | `.htm`, `.html`         | any web browser, often less                        |
 | `.odt`                  | LibreOffice, OpenOffice.org, any word processor    |
 | `.pdf`                  | `.xpdf`, Adobe Reader                              |
-| `.tif`, `.png`., `.jpg` | Gimp  
+| `.tif`, `.png`., `.jpg` | Gimp                                               |
 
 ## <span id="linux-file-system"></span>The Linux file system
 The Linux file system and the file system hierarchy standard (FHS)
@@ -303,26 +279,26 @@ The Linux file system and the file system hierarchy standard (FHS)
 - The Linux file system uses a hierarchy structure to organize data.
 - Linux systems have a standard set of subdirectories at the root.
 
-| directory          | description                                                 |
-| :---               | :---                                                        |
-| bin                | executables necessary to run the OS                         |
-| boot               | bootloader files to boot Linux                              |
-| dev                | devices that send/receive data sequentially (printers/mice); devices that are block-oriented (HDs, flash drives) |
-| etc                | text-based config files used by the system                  |
-| home               | home folders for users                                      |
-| lib -> usr/lib     | code libraries for programs in the bin or sbin directories  |
-| lib64              | 64-bit libraries                                            |
-| media              | used by some distros to mount external devices              |
-| mnt                | used by some distros to mount other external devices        |
-| opt                | contains files for programs you can install manually        |
-| proc               | pseudo file system for processes                            |
-| root               | root user's home directory                                  |
-| sbin               | mgmt and config files                                       |
-| srv                | where services save their files (e.g., httpd)               |
-| sys                | hardware within system                                      |
-| tmp                | temporary files created by file system                      |
-| usr                | application files                                           |
-| var                | Linux variable data and log files                           |
+| directory      | description                                                                                                      |
+| :------------- | :--------------------------------------------------------------------------------------------------------------- |
+| bin            | executables necessary to run the OS                                                                              |
+| boot           | bootloader files to boot Linux                                                                                   |
+| dev            | devices that send/receive data sequentially (printers/mice); devices that are block-oriented (HDs, flash drives) |
+| etc            | text-based config files used by the system                                                                       |
+| home           | home folders for users                                                                                           |
+| lib -> usr/lib | code libraries for programs in the bin or sbin directories                                                       |
+| lib64          | 64-bit libraries                                                                                                 |
+| media          | used by some distros to mount external devices                                                                   |
+| mnt            | used by some distros to mount other external devices                                                             |
+| opt            | contains files for programs you can install manually                                                             |
+| proc           | pseudo file system for processes                                                                                 |
+| root           | root user's home directory                                                                                       |
+| sbin           | mgmt and config files                                                                                            |
+| srv            | where services save their files (e.g., httpd)                                                                    |
+| sys            | hardware within system                                                                                           |
+| tmp            | temporary files created by file system                                                                           |
+| usr            | application files                                                                                                |
+| var            | Linux variable data and log files                                                                                |
 
 ### <span id="file-system"></span>Disk file systems
 - __ext2:__ second extended file system. Data is stored in hiearchical fashion (dirs/files). 2 TB is max file size.
@@ -357,33 +333,33 @@ The Linux file system and the file system hierarchy standard (FHS)
 __Archive (no compression)__
 
 | Command                           | Notes                                         |
-| :---                              | :---                                          |
+| :-------------------------------- | :-------------------------------------------- |
 | `tar -cf tarball.tar dir-to-tar`  | creates the tarball from dir-to-tar directory |
 | `tar -cf tarball.tar file1 file2` | creates the tarball from files indicated      |
 
 __Unarchive (no compression)__
 
-| Command                 | Notes                                    |
-| :---                    | :---                                     |
-| `tar -tf tarball.tar`   | show contents of tarball w/o unarchiving |
-| `tar -xf tarball.tar`   | extract tarball                          |
-| `tar -xvf tarball.tar`  | extract tarball, verbose                 |
+| Command                | Notes                                    |
+| :--------------------- | :--------------------------------------- |
+| `tar -tf tarball.tar`  | show contents of tarball w/o unarchiving |
+| `tar -xf tarball.tar`  | extract tarball                          |
+| `tar -xvf tarball.tar` | extract tarball, verbose                 |
 
 __Archiving with compression__
 
 While not required, it's best practice to indicate the compression used as part of the file name.
 
 | Command                               | Notes                 |
-| :---                                  | :---                  |
+| :------------------------------------ | :-------------------- |
 | `tar -czf tarball.tar.gz dir-to-tar`  | use gzip to compress  |
 | `tar -cjf tarball.tar.bz2 dir-to-tar` | use bzip2 to compress |
 
 __Unarchiving compressed tarballs__
 
-| Command                 | Notes                                      |
-| :---                    | :---                                       |
-| `tar -xzf tarball.tar.gz`   | extract compressed gzipped archive |
-| `tar -xjvf tarball.tar.bz2`   | extract compressed bzip2 archive, verbose |
+| Command                     | Notes                                     |
+| :-------------------------- | :---------------------------------------- |
+| `tar -xzf tarball.tar.gz`   | extract compressed gzipped archive        |
+| `tar -xjvf tarball.tar.bz2` | extract compressed bzip2 archive, verbose |
 
 
 ### <span id="compression"></span>Compression
@@ -413,13 +389,13 @@ __Unarchiving compressed tarballs__
 
 ### <span id="viewing-text"></span>Viewing text
 
-| Command    | Purpose |
-| :---       | :---     |
-| `cat`      | display contents of a file |
-| `less -M`  | reads file with pagination. <br><br>use `/` to search fwd and `?` to search backwards<br><br> `-M` shows lines you're reading and total, plus percentage <br><br>`-N` shows line numbers on the left <br><br> `G` goes to beginning and `shift` + `G` goes to end |
-| `head`     | read first 10 lines of a file. `-n $num_lines` |
-| `tail`     | read last 10 lines of a file; `-f` = follow |
-| `find`     | locates file on system<br><br>`find . -type d` find directories<br>`find . -type f` find files<br>`find . -iname "file*.` allows globbing |
+| Command   | Purpose                                                                                                                                                                                                                                                           |
+| :-------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `cat`     | display contents of a file                                                                                                                                                                                                                                        |
+| `less -M` | reads file with pagination. <br><br>use `/` to search fwd and `?` to search backwards<br><br> `-M` shows lines you're reading and total, plus percentage <br><br>`-N` shows line numbers on the left <br><br> `G` goes to beginning and `shift` + `G` goes to end |
+| `head`    | read first 10 lines of a file. `-n $num_lines`                                                                                                                                                                                                                    |
+| `tail`    | read last 10 lines of a file; `-f` = follow                                                                                                                                                                                                                       |
+| `find`    | locates file on system<br><br>`find . -type d` find directories<br>`find . -type f` find files<br>`find . -iname "file*.` allows globbing                                                                                                                         |
 
 ### <span id="analyzing-text"></span>Analyzing text
 - `grep`: searches for a string; allows globbing<br>
@@ -452,18 +428,18 @@ You can pipe the output of one command as the input for another command:
 
 #### Regular expressions for `grep` command
 
-| Expression     | Description                                       | Example            |
-| :---           | :---                                              | :---               |
-| *              | 0+ repeats of preceding character string or regex | `file*`            |
-| .              | any single char (grep)                            | `.cc`              |
-| ?              | 0+ of proceeding chars                            | `f?le`             |
-| ^              | appears at beginning                              | `^.b`              |
-| $              | appears at end                                    | `^...$` 3 chars    |
-| `\b<needle>\b` | word boundary (must match exactly)                | `\bwww\b`          |
-| [nnn]          | one char btw braces                               | `[abc]`            |
-| [^nnn]         | no chars btw braces                               | `[^abc]`           |
-| [a-z]          | any single char in range                          | `[a-x]`            |
-| [1-90]         | any digit between 1-9, and 0                      | ``                 |
+| Expression     | Description                                       | Example         |
+| :------------- | :------------------------------------------------ | :-------------- |
+| *              | 0+ repeats of preceding character string or regex | `file*`         |
+| .              | any single char (grep)                            | `.cc`           |
+| ?              | 0+ of proceeding chars                            | `f?le`          |
+| ^              | appears at beginning                              | `^.b`           |
+| $              | appears at end                                    | `^...$` 3 chars |
+| `\b<needle>\b` | word boundary (must match exactly)                | `\bwww\b`       |
+| [nnn]          | one char btw braces                               | `[abc]`         |
+| [^nnn]         | no chars btw braces                               | `[^abc]`        |
+| [a-z]          | any single char in range                          | `[a-x]`         |
+| [1-90]         | any digit between 1-9, and 0                      | ``              |
 
 ### <span id="redirection"></span>I/O Redirection
 
@@ -652,7 +628,7 @@ cat $FILENAME
 ## <span id="hardware"></span> Understanding computer hardware
 
 | Command             | Purpose                                                                |
-| :---                | :---                                                                   |
+| :------------------ | :--------------------------------------------------------------------- |
 | `cat /proc/cpuinfo` | view processor details                                                 |
 | `free`              | view RAM stats in bytes<br><br>`-m` = show in MB<br> `-g` = show in GB |
 | `dmidecode`         | show details about motherboard, BIOS, processor, and RAM               |
@@ -718,16 +694,16 @@ cat $FILENAME
 #### Important network tools
 
 | Tool             | Purpose                                 |
-| ---              | ---                                     |
+| ---------------- | --------------------------------------- |
 | `ping -c $num `  | testing connectivity                    |
 | `dig`            | `dig www.pluralsight.com -t A`          |
 | `nslookup`       | `nslookup -query=A www.pluralsight.com` |
 | `netstat`        | list network connections                |
 | `route`          | current route/netwk settings            |
-| `host $fqdn`    | test DNS resolution                     |
+| `host $fqdn`     | test DNS resolution                     |
 | `traceroute`     | trace packet route                      |
 | `ifconfig`       | current network settings                |
-| `ip addr [show]` | current IP addr and network settings    | 
+| `ip addr [show]` | current IP addr and network settings    |
 
 - You set up DNS information in __/etc/resolv.conf__, but in some distros you're not supposed to edit this file.
 - You can see CentOS network config in __/etc/sysconfig/network-scripts/ifcfg-ens33__ or some other __ifcfg...__ file.
@@ -754,13 +730,13 @@ cat $FILENAME
 
 ### <span id="other"></span>Other commands
 
-| Command | Description |
-| --- | --- |
+| Command      | Description                             |
+| ------------ | --------------------------------------- |
 | `netstat -a` | Lists listening & non-listening sockets |
-| `netstat -i` | Stats about the network interfaces |
-| `netstat -l` | Lists listening sockets |
-| `netstat -s` | Summary for each protocol |
-| `netstat -r` | Equivalent to `route` |
+| `netstat -i` | Stats about the network interfaces      |
+| `netstat -l` | Lists listening sockets                 |
+| `netstat -s` | Summary for each protocol               |
+| `netstat -r` | Equivalent to `route`                   |
 
 
 ## <span id="security"></span>Basic security and user types

@@ -1,10 +1,10 @@
 ---
-title: "Complete Wifi Hacking Course 2024"
+title: "Complete Wifi Hacking Course 2025"
 description: "This course is designed to be hands-on and beginner-friendly, so even if you’re new to the world of network security, you’ll be able to follow along with ease. By the end, you'll have a"
 slug: "wifi-hacking-course"
 date: "2024-11-14"
 author: "Waseem Akram"
-image: "/images/posts/instahack/instahack.webp"
+image: "/images/posts/wifi-hack/wifi-hacking-course.webp"
 ---
 
 # About Course

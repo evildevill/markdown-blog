@@ -52,6 +52,7 @@ export function CommandDialogPopup() {
     { label: "Active Directory Resources", slug: "/blogposts/active-directory-resources" },
     { label: "Understanding the basename command in linux", slug: "/blogposts/understanding-the-basename-command-in-linux" },
     { label: "Steganography for Beginners - Data Hiding Techniques 🔏", slug: "/blogposts/steganography-for-beginners-data-hiding-techniques" },
+    { label: "The Complete Linux Essentials Guide: Learn, Apply, and Master Linux Skills", slug: "/blogposts/the-complete-linux-essentials-guide-learn-apply-and-master-linux-skills" },
   ];
 
   // Filter items based on the search query
