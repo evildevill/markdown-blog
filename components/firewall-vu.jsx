@@ -6,6 +6,7 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import { Card } from "@/components/ui/card"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { NewsLetter } from "./news-letter";
+import { Button } from "./ui/button";
 
 const reviews = [
   {
@@ -71,6 +72,14 @@ const reviews = [
     fallback: "GK",
     rating: 5,
     review: "Smoothly working. You helped a lot of students by developing this extension. Keep it up.. Great work ngl"
+  },
+  {
+    name: "Usman Ghani",
+    avatar: "/placeholder-user.jpg",
+    alt: "@usman",
+    fallback: "UG",
+    rating: 5,
+    review: "Thanks a lot, Outstanding! Highly recommend, five stars without a doubt!😍😊"
   }
 ];
 
@@ -80,7 +89,7 @@ export function FirewallVu() {
 
   useEffect(() => {
     let start = 0;
-    const end = 	11140;
+    const end = 11140;
     const duration = 0.2;
     const incrementTime = (duration / end) * 1000;
 
@@ -244,6 +253,12 @@ export function FirewallVu() {
                   </div>
                 </Card>
               ))}
+            </div>
+            <div className="flex justify-center mt-8">
+              <Link href="https://chromewebstore.google.com/detail/firewall-bypass-vu/hhcfihihmefjillpbedllenmllhpaflc/reviews"
+                prefetch={false}>
+                <Button className="w-full">See More Reviews</Button>
+              </Link>
             </div>
           </div>
         </section>
