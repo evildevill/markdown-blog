@@ -80,7 +80,7 @@ export function FirewallVu() {
 
   useEffect(() => {
     let start = 0;
-    const end = 10978;
+    const end = 	11140;
     const duration = 0.2;
     const incrementTime = (duration / end) * 1000;
 
