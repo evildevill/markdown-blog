@@ -20,7 +20,7 @@ export function OtherPosts({ currentSlug }) {
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {otherPosts.length > 0 ? (
           otherPosts.map((post, index) => (
-            <div key={post.id || index} className="bg-white dark:bg-black rounded-lg shadow-md overflow-hidden">
+            <div key={post.id || index} className="bg-white dark:bg-slate-900 rounded-lg shadow-md overflow-hidden">
               {/* <Link href={`/blogposts/${post.slug}`} prefetch={false}>
                 <Image
                   src={post.image}

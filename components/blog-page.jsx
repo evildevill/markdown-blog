@@ -4,14 +4,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const SkeletonCard = () => (
-  <div className="bg-white dark:bg-black rounded-lg shadow-md overflow-hidden animate-pulse">
-    <div className="w-full h-48 bg-gray-300 dark:bg-gray-700"></div>
+  <div className="bg-white dark:bg-slate-900 rounded-lg shadow-md overflow-hidden animate-pulse">
+    <div className="w-full h-48 bg-gray-300 dark:bg-slate-900"></div>
     <div className="p-6">
-      <div className="h-4 bg-gray-300 dark:bg-gray-700 mb-4"></div>
-      <div className="h-4 bg-gray-300 dark:bg-gray-700 mb-2"></div>
-      <div className="h-4 bg-gray-300 dark:bg-gray-700 mb-2"></div>
-      <div className="h-4 bg-gray-300 dark:bg-gray-700 mb-2"></div>
-      <div className="h-8 bg-gray-300 dark:bg-gray-700 mt-4"></div>
+      <div className="h-4 bg-gray-300 dark:bg-slate-900 mb-4"></div>
+      <div className="h-4 bg-gray-300 dark:bg-slate-900 mb-2"></div>
+      <div className="h-4 bg-gray-300 dark:bg-slate-900 mb-2"></div>
+      <div className="h-4 bg-gray-300 dark:bg-slate-900 mb-2"></div>
+      <div className="h-8 bg-gray-300 dark:bg-slate-900 mt-4"></div>
     </div>
   </div>
 );
@@ -59,7 +59,7 @@ const BlogPage = () => {
           Array.from({ length: 6 }).map((_, index) => <SkeletonCard key={index} />)
         ) : (
           posts.map((post, index) => (
-            <div key={post.id || index} className="bg-white dark:bg-black rounded-lg shadow-md overflow-hidden">
+            <div key={post.id || index} className="bg-white dark:bg-slate-900 rounded-lg shadow-md overflow-hidden">
               <Link href={`/blogposts/${post.slug}`} prefetch={false}>
                 <Image
                   src={post.image}
